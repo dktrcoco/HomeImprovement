@@ -1,9 +1,9 @@
 # HomeImprovement
 Project 3
 
-Link of Deployed App:
+Link of Deployed App: https://home-management-app.herokuapp.com/
 
-Link to Heroku Repo:
+Link to GitHub Repo: https://github.com/dktrcoco/HomeImprovement
 
 Table of Contents
 * [User Story](#story)
@@ -58,5 +58,15 @@ If you have any questions that are not answered, please feel free to reach out t
 You can also reach us through GitHub directly via our accounts (listed above).
 
 ## Future
+
+-assign chores to specific users (dad cleans garage, kid feeds Fido)
+-Mark off if a chore has been completed
+-‘Gamification’ of chores
+-Color code chores by category
+-Include api calls for weather to influence recommendations for outdoor chores
+-Add multiple log-ins
+-Add multiple authentication level types
+-SMS messages
+-Ability to add important events to the calendar (birthdays, vacations, etc)
 
 ## Retrospective
