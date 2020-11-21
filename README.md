@@ -67,6 +67,7 @@ You can also reach us through GitHub directly via our accounts (listed above).
 -Add multiple log-ins
 -Add multiple authentication level types
 -SMS messages
+
 -Ability to add important events to the calendar (birthdays, vacations, etc)
 
 ## Retrospective
