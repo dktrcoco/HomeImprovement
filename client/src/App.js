@@ -4,7 +4,7 @@ import Books from "./pages/Books";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
-import Test from "./components/Test";
+// import Test from "./components/Test";
 import Login from './components/Login';
 import Signup from './components/Signup';
 
@@ -28,7 +28,7 @@ function App() {
           </div>
         </nav>
       </div>
-      <Test />
+      {/* <Test /> */}
       <Login />
       <Signup />
       <div>
