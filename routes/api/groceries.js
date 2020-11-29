@@ -1,12 +1,34 @@
 const router = require("express").Router();
 
-var db = require("../models");
+var db = require("../../models");
 
-// GET route for getting all groceries
-// not sure how to differentiate groceries from other data
-router.route("/api/posts/", function(req, res) {
-    db.Post.findAll({})
-    .then(function(dbPost) {
-        res.json(dbPost);
+// GET route for getting all chores
+// don't needs controller if have access to db directly here
+router.route("/")
+    .get(function (req, res) {
+        db.Grocery.create(req.body)
+            .then(function (dbGrocery) {
+                res.json(dbGrocery)
+            });
     });
-});
+
+// will grab one chore by id and update based on user input
+router.route("/:id")
+    .put(function (req, res) {
+        db.Grocery.findOneAndUpdate({ _id: req.params.id }, req.body)
+            .then(function (dbGrocery) {
+                res.json(dbGrocery)
+            })
+    })
+    // will delete a selected chore by id
+    .delete(function (req, res) {
+        db.Grocery.findById({ _id: req.params.id })
+            .then(function (dbGrocery) {
+                dbGrocery.remove()
+            })
+            .then(function (dbGrocery) {
+                res.json(dbGrocery)
+            });
+    });
+
+module.exports = router;    
