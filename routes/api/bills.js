@@ -1,12 +1,39 @@
 const router = require("express").Router();
 
-var db = require("../models");
+var db = require("../../models");
 
 // GET route for getting all bills
-// not sure how to differentiate bills from other data
-router.route("/api/posts/", function(req, res) {
-    db.Post.findAll({})
-    .then(function(dbPost) {
-        res.json(dbPost);
+router.route("/")
+    .get(function (req, res) {
+        db.Bill.find({})
+            .then(function (dbBill) {
+                res.json(dbBill);
+            })
+    })
+    .post(function (req, res) {
+        db.Bill.create(req.body)
+            .then(function (dbBill) {
+                res.json(dbBill)
+            });
     });
-});
+
+// will grab one bill by id and update based on user input
+router.route("/:id")
+    .put(function (req, res) {
+        db.Bill.findOneAndUpdate({ _id: req.params.id }, req.body)
+            .then(function (dbill) {
+                res.json(dbBill)
+            })
+    })
+    // will delete a selected bill by id
+    .delete(function (req, res) {
+        db.Bill.findById({ _id: req.params.id })
+            .then(function (dbBill) {
+                dbBill.remove()
+            })
+            .then(function (dbBill) {
+                res.json(dbBill)
+            });
+    });
+
+module.exports = router;

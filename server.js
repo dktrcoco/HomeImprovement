@@ -1,12 +1,17 @@
+// setup for auth
 const express = require("express");
+const passport = require('passport');
 
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
-const passport = require('passport');
+
 const cors = require('cors')
 const cookieSession = require('cookie-session');
-const session = require('express-session')
+
+// module in express that allows session tracking
+// this gives you data access to the user
+const session = require('express-session');
 require('./passport-setup');
 
 const PORT = process.env.PORT || 3001;
@@ -23,6 +28,10 @@ app.use(cookieSession({
   keys: ['key1', 'key2']
 }))
 
+// We need to use sessions to keep track of our user's login status
+app.use(
+  session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
+);
 app.use(passport.initialize()); // initializes auth process
 // app.use(passport.session()); // tells to use sessions to auth
 // need to have an endpoint at my local server to tell the front end whether the user is logged in
@@ -33,7 +42,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Add routes, both API and view
-// app.use(routes);
+app.use(routes);
 
 // we want to return the user data
 app.get('/userInfo', (req, res) => {
