@@ -9,21 +9,24 @@ router.route("/")
             .then(function (dbBill) {
                 res.json(dbBill);
             })
+            .catch(err => res.status(422).json(err));
     })
     .post(function (req, res) {
         db.Bill.create(req.body)
             .then(function (dbBill) {
                 res.json(dbBill)
-            });
+            })
+            .catch(err => res.status(422).json(err));
     });
 
 // will grab one bill by id and update based on user input
 router.route("/:id")
     .put(function (req, res) {
         db.Bill.findOneAndUpdate({ _id: req.params.id }, req.body)
-            .then(function (dbill) {
+            .then(function (dbBill) {
                 res.json(dbBill)
             })
+            .catch(err => res.status(422).json(err));
     })
     // will delete a selected bill by id
     .delete(function (req, res) {
@@ -33,7 +36,8 @@ router.route("/:id")
             })
             .then(function (dbBill) {
                 res.json(dbBill)
-            });
+            })
+            .catch(err => res.status(422).json(err));
     });
 
 module.exports = router;
