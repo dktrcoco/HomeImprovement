@@ -8,7 +8,7 @@ export default {
   getBills: function() {
     return axios.get("/api/bills");
   },
-  // Gets the chore with the given id
+  // Gets the bill with the given id
   getBill: function(id) {
     return axios.get("/api/bills/" + id);
   },
@@ -16,7 +16,7 @@ export default {
   deleteBill: function(id) {
     return axios.delete("/api/bills/" + id);
   },
-  // Saves a chore to the database
+  // Saves a bill to the database
   saveBill: function(billData) {
     return axios.post("/api/bills", billData);
   }

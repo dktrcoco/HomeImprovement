@@ -8,7 +8,7 @@ export default {
   getEvents: function() {
     return axios.get("/api/events");
   },
-  // Gets the chore with the given id
+  // Gets the event with the given id
   getEvent: function(id) {
     return axios.get("/api/events/" + id);
   },
@@ -16,7 +16,7 @@ export default {
   deleteEvent: function(id) {
     return axios.delete("/api/events/" + id);
   },
-  // Saves a chore to the database
+  // Saves a event to the database
   saveEvent: function(eventData) {
     return axios.post("/api/events", eventData);
   }

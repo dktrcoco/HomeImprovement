@@ -17,8 +17,8 @@ export default {
     return axios.delete("/api/groceries/" + id);
   },
   // Saves a grocery to the database
-  saveGrocery: function(choreData) {
-    return axios.post("/api/groceries", choreData);
+  saveGrocery: function(groceryData) {
+    return axios.post("/api/groceries", groceryData);
   }
 };
 
