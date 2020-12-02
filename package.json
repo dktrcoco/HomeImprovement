@@ -32,11 +32,13 @@
     "express-session": "^1.17.1",
     "if-env": "^1.0.4",
     "install-peerdeps": "^2.0.3",
+    "moment": "^2.29.1",
     "mongoose": "^5.3.16",
     "npm-dependency": "^0.2.0",
     "passport": "^0.4.1",
     "passport-google-oauth20": "^2.0.0",
     "react-big-calendar": "^0.29.0",
-    "react-calendar": "^3.2.1"
+    "react-calendar": "^3.2.1",
+    "react-router-dom": "^5.2.0"
   }
 }
