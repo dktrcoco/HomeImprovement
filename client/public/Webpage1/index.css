@@ -1,0 +1,92 @@
+.shonta {
+    margin: 50px auto 60px;
+    display: block;
+    position: fixed;
+    top: 60%;
+    left: 60%;
+    border-radius: 40%;
+  }
+
+  .Matt {
+    margin: 50px auto 60px;
+    display: block;
+    position: fixed;
+    top: 60%;
+    left: 80%;
+    border-radius: 40%;
+  }
+  .christian {
+    margin: 50px auto 60px;
+    display: block;
+    position: fixed;
+    top: 60%;
+    left: 40%;
+    border-radius: 40%;
+  }
+  .chris {
+    margin: 50px auto 60px;
+    display: block;
+    position: fixed;
+    top: 60%;
+    left: 20%;
+    border-radius: 40%;
+  }
+  .meet {
+      text-align: center;
+      margin: 10px auto 20px;
+      display: block;
+      position: fixed;
+      top: 35%;
+      left: 36%;
+      font-style: oblique;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      color: white;
+      font-size: 50px;
+      
+  }
+
+  .shonta1 {
+    margin: 26px auto 26px;
+    display: block;
+    position: fixed;
+    top: 55%;
+    left: 63%;
+    border-radius: 40%;
+    cursor: pointer;
+  }
+  
+  .Matt1 {
+    margin: 26px auto 26px;
+    display: block;
+    position: fixed;
+    top: 55%;
+    left: 85%;
+    border-radius: 40%;
+    cursor: pointer;
+  }
+
+
+  .christian1 {
+    margin: 26px auto 26px;
+    display: block;
+    position: fixed;
+    top: 55%;
+    left: 43%;
+    border-radius: 40%;
+    cursor: pointer;
+  }
+
+
+  .chris1 {
+    margin: 26px auto 26px;
+    display: block;
+    position: fixed;
+    top: 55%;
+    left: 23%;
+    border-radius: 40%;
+    cursor: pointer;
+  }
+
+
+
+
