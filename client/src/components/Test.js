@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 function Test() {
+    // state would go here
     return(
-        <p>Test December</p>
+        <p>Cool</p>
     );
 }
 
