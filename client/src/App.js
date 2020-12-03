@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import Test from "./components/Test";
+import Team from "./components/Team";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import UserCheck from "./components/UserCheck";
@@ -17,19 +18,20 @@ function App() {
 			</div>
 			<div>
 				<Nav />
-        
+
 				<Switch>
 					<Route exact path="/" component={Login} />
 					<Route path="/sign-in" component={Login} />
 					<Route path="/sign-up" component={Signup} />
-          
+
 					<Route>
 						<NoMatch />
 					</Route>
 				</Switch>
 			</div>
-      <Test />
-      <MyCalendar />
+			<Test />
+			<MyCalendar />
+			<Team />
 		</Router>
 	);
 }
