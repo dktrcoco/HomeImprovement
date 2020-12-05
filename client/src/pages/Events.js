@@ -27,7 +27,7 @@ function Events() {
 
     // Deletes an event from the database with a given id, 
     // then reloads events from the db
-    function deleteEvent() {
+    function deleteEvent(id) {
         EventAPI.deleteEvent(id)
             .then(res => loadEvents())
             .catch(err => console.log(err));
@@ -62,6 +62,9 @@ function Events() {
         <Container>
             <Calendar />
             <EventForm />
+            <div>
+                onChange={handleInputChange}
+            </div>
         </Container>
     );
 }

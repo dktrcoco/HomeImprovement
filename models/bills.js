@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const billSchema = new Schema({
   bill: { type: String, required: true },
-  value: { type: Number, require: true },
+  value: { type: Number, required: true },
   date: { type: Date, default: Date.now }
 });
 

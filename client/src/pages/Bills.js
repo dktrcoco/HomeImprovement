@@ -45,6 +45,7 @@ function Bills() {
     // Then reloads bills from the database
     function handleFormSubmit(event) {
         event.preventdefault();
+        console.log(event);
         if (formObject.bill && formObject.value && formObject.date) {
             BillAPI.saveBill({
                 bill: formObject.bill,
