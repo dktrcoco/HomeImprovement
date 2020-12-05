@@ -17,17 +17,19 @@ import EventForm from "./components/EventForm";
 import ChoreForm from "./components/ChoreForm";
 import BillForm from "./components/BillForm";
 import GroceryForm from "./components/GroceryForm";
+import Button from "./components/NewButton";
 
 function App() {
 	return (
 		<Router>
 			<div>
+				<Button img="./public/assets/img/bills.png" />
 				{/* <UserCheck /> */}
 				{/* <Event /> trying to have the component go thru the page */}
-				<EventForm />
+				{/* <EventForm />
 				<ChoreForm />
 				<BillForm />
-				<GroceryForm />
+				<GroceryForm /> */}
 				{/* <Switch>
 					<Route path="/Bills">
 						<Bills />
@@ -48,20 +50,37 @@ function App() {
 			</div>
 			<div>
 				<Nav />
+				<MyCalendar />
 
 
 				<Switch>
 					<Route exact path="/" component={Login} />
 					<Route path="/sign-in" component={Login} />
 					<Route path="/sign-up" component={Signup} />
+					<Route path="/bills" component={BillForm} />
+					<Route path="/chores" component={ChoreForm} />
+					<Route path="/events" component={EventForm} />
+					<Route path="/groceries" component={GroceryForm} />
 
 					<Route>
 						<NoMatch />
 					</Route>
+
+					{/* <Route path="/chores">
+						<ChoreForm />
+					</Route>
+
+					<Route path="/Events">
+						<EventForm />
+					</Route>
+
+					<Route path="/Groceries">
+						<GroceryForm />
+					</Route> */}
 				</Switch>
 			</div>
 			<Test />
-			<MyCalendar />
+			
 			<Team />
 		</Router>
 	);
