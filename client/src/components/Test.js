@@ -3,7 +3,7 @@ import React from "react";
 function Test() {
     // state would go here
     return(
-        <p>Cool</p>
+        <p>This is my Test component.</p>
     );
 }
 
