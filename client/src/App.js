@@ -19,18 +19,22 @@ import BillForm from "./components/BillForm";
 import GroceryForm from "./components/GroceryForm";
 import Button from "./components/NewButton";
 
+import eventIcon from "./img/events.png";
+import choreIcon from "./img/chores.png";
+import billIcon from "./img/bills.png";
+import groceryIcon from "./img/groceries.png";
+
 function App() {
-	return (
-		<Router>
-			<div>
-				<Button img="./public/assets/img/bills.png" />
-				{/* <UserCheck /> */}
-				{/* <Event /> trying to have the component go thru the page */}
-				{/* <EventForm />
+  return (
+    <Router>
+      <div>
+        {/* <UserCheck /> */}
+        {/* <Event /> trying to have the component go thru the page */}
+        {/* <EventForm />
 				<ChoreForm />
 				<BillForm />
 				<GroceryForm /> */}
-				{/* <Switch>
+        {/* <Switch>
 					<Route path="/Bills">
 						<Bills />
 					</Route>
@@ -47,26 +51,29 @@ function App() {
 						<Groceries />
 					</Route>
 				</Switch> */}
-			</div>
-			<div>
-				<Nav />
-				<MyCalendar />
+      </div>
+      <div>
+        {/* <Nav /> */}
+        <MyCalendar />
+		<Button img={eventIcon} href="/events" />
+		<Button img={choreIcon} href="/chores" />
+		<Button img={billIcon} href="/bills" />
+		<Button img={groceryIcon} href="/groceries" />
 
+        <Switch>
+          <Route exact path="/" component={Login} />
+          <Route path="/sign-in" component={Login} />
+          <Route path="/sign-up" component={Signup} />
+          <Route path="/bills" component={BillForm} />
+          <Route path="/chores" component={ChoreForm} />
+          <Route path="/events" component={EventForm} />
+          <Route path="/groceries" component={GroceryForm} />
 
-				<Switch>
-					<Route exact path="/" component={Login} />
-					<Route path="/sign-in" component={Login} />
-					<Route path="/sign-up" component={Signup} />
-					<Route path="/bills" component={BillForm} />
-					<Route path="/chores" component={ChoreForm} />
-					<Route path="/events" component={EventForm} />
-					<Route path="/groceries" component={GroceryForm} />
+          <Route>
+            <NoMatch />
+          </Route>
 
-					<Route>
-						<NoMatch />
-					</Route>
-
-					{/* <Route path="/chores">
+          {/* <Route path="/chores">
 						<ChoreForm />
 					</Route>
 
@@ -77,13 +84,13 @@ function App() {
 					<Route path="/Groceries">
 						<GroceryForm />
 					</Route> */}
-				</Switch>
-			</div>
-			<Test />
-			
-			<Team />
-		</Router>
-	);
+        </Switch>
+      </div>
+      <Test />
+
+      <Team />
+    </Router>
+  );
 }
 
 export default App;
