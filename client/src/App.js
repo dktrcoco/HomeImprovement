@@ -19,10 +19,10 @@ import BillForm from "./components/BillForm";
 import GroceryForm from "./components/GroceryForm";
 import Button from "./components/NewButton";
 
-import eventIcon from "./img/events.png";
-import choreIcon from "./img/chores.png";
-import billIcon from "./img/bills.png";
-import groceryIcon from "./img/groceries.png";
+// import eventIcon from "./img/events.png";
+// import choreIcon from "./img/chores.png";
+// import billIcon from "./img/bills.png";
+// import groceryIcon from "./img/groceries.png";
 
 function App() {
   return (
@@ -55,10 +55,10 @@ function App() {
       <div>
         {/* <Nav /> */}
         <MyCalendar />
-		<Button img={eventIcon} href="/events" />
-		<Button img={choreIcon} href="/chores" />
-		<Button img={billIcon} href="/bills" />
-		<Button img={groceryIcon} href="/groceries" />
+        {/* <Button img={eventIcon} href="/events" />
+        <Button img={choreIcon} href="/chores" />
+        <Button img={billIcon} href="/bills" />
+        <Button img={groceryIcon} href="/groceries" /> */}
 
         <Switch>
           <Route exact path="/" component={Login} />
