@@ -1,8 +1,10 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 // import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
+import Options from "./components/Options";
 import Test from "./components/Test";
 import Team from "./components/Team";
 import Login from "./components/Login";
@@ -19,6 +21,7 @@ import BillForm from "./components/BillForm";
 import GroceryForm from "./components/GroceryForm";
 import Button from "./components/NewButton";
 
+// importing images for routes
 import eventIcon from "./img/events.png";
 import choreIcon from "./img/chores.png";
 import billIcon from "./img/bills.png";
@@ -53,8 +56,11 @@ function App() {
 				</Switch> */}
       </div>
       <div>
-        {/* <Nav /> */}
+        <Nav />
+		<br></br>
+		<br></br>
         <MyCalendar />
+		<Options />
 		<Button img={eventIcon} href="/events" />
 		<Button img={choreIcon} href="/chores" />
 		<Button img={billIcon} href="/bills" />

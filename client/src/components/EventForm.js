@@ -55,6 +55,7 @@ function EventForm() {
   return (
     <Container>
       <form action="/api/events" method="post">
+          <a href="/features"></a>
         <h2>Enter an Event</h2>
         <input
           onChange={handleInputChange}
