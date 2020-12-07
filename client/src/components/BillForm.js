@@ -42,11 +42,11 @@ function BillForm() {
   function handleFormSubmit(event) {
     event.preventDefault();
     console.log(formObject);
-    if (formObject.bill && formObject.billValue && formObject.billDate) {
+    if (formObject.bill && formObject.value && formObject.date) {
       BillAPI.saveBill({
         title: formObject.bill,
-        billValue: formObject.value,
-        billDate: formObject.date,
+        value: formObject.value,
+        date: formObject.date,
         bill: formObject.bill
       })
         .then((res) => loadBills())
@@ -72,14 +72,14 @@ function BillForm() {
           onChange={handleInputChange}
           type="value"
           className="form-control"
-          name="billValue"
+          name="value"
           placeholder="How much is owed?"
         />
         <input
           onChange={handleInputChange}
           type="datetime-local"
           className="form-control"
-          name="billDate"
+          name="date"
           placeholder="When is this bill due?"
         />
         <button
