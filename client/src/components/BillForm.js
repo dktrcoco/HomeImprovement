@@ -5,10 +5,11 @@ import Calendar from "../components/Calendar";
 import { Row, Col, Container, Card } from "react-bootstrap";
 
 function BillForm() {
+  // Setting Bills component's initial state
   const [bills, setBills] = useState([]);
   const [formObject, setFormObject] = useState({});
 
-  // Load all Bills and store them with setBills
+  // Load all bills and store them with setBills
   useEffect(() => {
     loadBills();
   }, []);
@@ -40,15 +41,19 @@ function BillForm() {
   // Then reloads bills from the database
   function handleFormSubmit(event) {
     event.preventDefault();
-    console.log(event);
+    console.log(formObject);
     if (formObject.bill && formObject.billValue && formObject.billDate) {
       BillAPI.saveBill({
-        bill: formObject.bill,
-        value: formObject.billValue,
-        date: formObject.billDate,
+        title: formObject.bill,
+        billValue: formObject.value,
+        billDate: formObject.date,
+        bill: formObject.bill
       })
         .then((res) => loadBills())
         .catch((err) => console.log(err));
+    }
+    else {
+      alert("Fill out all fields!")
     }
   }
 
@@ -72,7 +77,7 @@ function BillForm() {
         />
         <input
           onChange={handleInputChange}
-          type="date"
+          type="datetime-local"
           className="form-control"
           name="billDate"
           placeholder="When is this bill due?"

@@ -1,5 +1,8 @@
 import React, { Component } from "react";
-import { Calendar, momentLocalizer } from 'react-big-calendar'
+import { Calendar, momentLocalizer } from 'react-big-calendar';
+import billApi from '../utils/billAPI';
+import choreApi from '../utils/choreAPI';
+import eventApi from '../utils/eventAPI';
 import moment from 'moment'
 import ChoreForm from '../components/_ChoreForm'
 
@@ -11,6 +14,13 @@ const FAKE_DB = {
       title: "pick up food",
       start: new Date(moment("12/12/2020 4:00pm", "MM/DD/YYYY H:mma").format()),
       end: new Date(moment("12/12/2020 4:30pm", "MM/DD/YYYY H:mma").format()),
+      allDay: false,
+      resource: "eat",
+    },
+    {
+      title: "Party all day",
+      start: new Date(moment("12/13/2020 4:00pm", "MM/DD/YYYY H:mma").format()),
+      end: new Date(moment("12/13/2020 4:30pm", "MM/DD/YYYY H:mma").format()),
       allDay: false,
       resource: "eat",
     }
@@ -50,8 +60,22 @@ class MyCalendar extends Component {
   }
 
   componentDidMount() {
-    this.getEvents("events")
-  }
+    eventApi.getEvents().then((res) => {
+      const events = res.data
+      console.log(events)
+      this.setState({events})
+    });
+    choreApi.getChores().then((res) => {
+      const chores = res.data
+      console.log(chores)
+      this.setState({chores})
+    });
+    billApi.getBills().then((res) => {
+      const bills = res.data
+      console.log(bills)
+      this.setState({bills})
+    })
+  };
 
   getEvents = async (type) => {
     // get DB for events based on type. i.e. events, chores, bills, etc
@@ -71,9 +95,9 @@ class MyCalendar extends Component {
         />
         <div style={{ display: "flex" }}>
           <MyIcon src="./assets/img/events.png" onClick={() => this.getEvents("events")} />
-          <MyIcon src="./assets/img/bills.png" onClick={() => this.getEvents("bills")} />
-          <MyIcon src="./assets/img/chores.png" onClick={() => this.getEvents("chores")} />
-          <MyIcon src="./assets/img/groceries.png" onClick={() => this.getEvents("groceries")} />
+          <MyIcon src="./assets/img/bills.png" onClick={() => this.getBills("bills")} />
+          <MyIcon src="./assets/img/chores.png" onClick={() => this.getChores("chores")} />
+          <MyIcon src="./assets/img/groceries.png" onClick={() => this.getGroceries("groceries")} />
         </div>
         {
           this.state.type === "chores" && <ChoreForm refreshEvents={() => this.getEvents("events")} />

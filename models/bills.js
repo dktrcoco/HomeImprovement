@@ -2,9 +2,10 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const billSchema = new Schema({
-  bill: { type: String, required: true },
-  value: { type: Number, required: true },
-  date: { type: Date, default: Date.now }
+  title: { type: String, required: true },
+  billValue: { type: Number, required: true },
+  billDate: { type: Date, default: Date.now },
+  bill: { type: String, required: true }
 });
 
 const Bill = mongoose.model("Bill", billSchema);

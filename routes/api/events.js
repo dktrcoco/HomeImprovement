@@ -13,6 +13,7 @@ router.route("/")
             })
     })
     .post(function (req, res) {
+        console.log(req.body);
         db.Event.create(req.body)
             .then(function (dbEvent) {
                 res.json(dbEvent)
