@@ -33,7 +33,7 @@ const Nav = (props) => {
       </button>
 
       <div
-        class={`${isNavCollapsed ? "collapse" : ""} navbar-collapse`}
+        className={`${isNavCollapsed ? "collapse" : ""} navbar-collapse`}
         id="navbarsExample09"
       >
         <Link
