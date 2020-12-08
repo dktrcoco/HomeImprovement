@@ -1,7 +1,31 @@
 import React from 'react';
+import axios from 'axios';
 // import "/signup.css";
 
 function Signup() {
+
+    // handleSubmit(event) {
+    //     event.preventDefault();
+    // console.log('sign up form, username" ');
+    // console.log(this.state.username);
+    // axios.post('/', {
+    //     username: this.state.username,
+    //     password: this.state.password
+    // })
+    // .then(response => {
+    //     console.log(response)
+    //     if(response.data) {
+    //         console.log('successful signup')
+    //         this.setState({
+    //             redirectTo: '/login'
+    //         })
+    //     } else {
+    //         console.log('Sign-up error: ');
+    //         console.log(error);
+    //     }
+    // })
+    // }
+
     return (
 
         <form>
@@ -18,6 +42,16 @@ function Signup() {
             </div>
 
             <div className="form-group">
+                <label>Username</label>
+                <input 
+                type="text" 
+                className="form-control"
+                // value={this.state.username} 
+                // onChange={this.handleChange}
+                placeholder="Enter Username" />
+            </div>
+
+            <div className="form-group">
                 <label>Password</label>
                 <input type="password" className="form-control" placeholder="Enter Password" />
             </div>
@@ -29,5 +63,11 @@ function Signup() {
         </form>
     )
 }
+
+// handleSubmit(event) {
+//     event.preventDefault();
+//     console.log('sign up form, username" ');
+//     console.log(this.state.username);
+// }
 
 export default Signup;
