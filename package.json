@@ -20,6 +20,9 @@
     "nodemon": "^1.18.7"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.13",
     "@fullcalendar/daygrid": "^5.4.0",
     "@fullcalendar/react": "^5.4.0",
     "@popperjs/core": "^2.5.4",
