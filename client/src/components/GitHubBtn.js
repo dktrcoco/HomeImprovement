@@ -9,7 +9,7 @@ function GitHubBtn({ href }) {
   return (
     <>
       <a className="github-btn" href={href} target="_blank">
-        <i className="fab fa-github">
+        <i className="fab fa-github fa-3x">
           <FontAwesomeIcon icon={faGithub} />
         </i>
         <span className="gitText"></span>
