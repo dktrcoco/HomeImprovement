@@ -9,6 +9,7 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 // import UserCheck from "./components/UserCheck";
 import MyCalendar from "./components/Calendar";
+import Features from "./components/Features";
 // import Event from "./pages/Events";
 // import Bills from "./pages/Bills";
 // import Chores from "./pages/Chores";
@@ -53,8 +54,9 @@ function App() {
 				</Switch> */}
       </div>
       <div>
-        {/* <Nav /> */}
+        <Nav />
         <MyCalendar />
+        <Features />
         {/* <Button img={eventIcon} href="/events" />
         <Button img={choreIcon} href="/chores" />
         <Button img={billIcon} href="/bills" />
