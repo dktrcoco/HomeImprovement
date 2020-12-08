@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
+import { Row, Col, Container, Card, Button } from "react-bootstrap";
 import billApi from "../utils/billAPI";
 import choreApi from "../utils/choreAPI";
 import eventApi from "../utils/eventAPI";
 import moment from "moment";
 import ChoreForm from "../components/_ChoreForm";
+import "./CalendarStyle.css";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 const localizer = momentLocalizer(moment);
@@ -112,12 +114,23 @@ class MyCalendar extends Component {
           endAccessor="end"
           style={{ height: 500 }}
         />
-        <div style={{ display: "flex" }}>
-          <MyIcon src="./assets/img/events.png" link="events" />
-          <MyIcon src="./assets/img/bills.png" link="bills" />
-          <MyIcon src="./assets/img/chores.png" link="chores" />
-          <MyIcon src="./assets/img/groceries.png" link="groceries" />
-        </div>
+        <Row className="features" style={{ display: "flex" }}>
+          <Col>
+            <MyIcon src="./assets/img/events.png" link="events" />
+          </Col>
+
+          <Col>
+            <MyIcon src="./assets/img/bills.png" link="bills" />
+          </Col>
+
+          <Col>
+            <MyIcon src="./assets/img/chores.png" link="chores" />
+          </Col>
+
+          <Col>
+            <MyIcon src="./assets/img/groceries.png" link="groceries" />
+          </Col>
+        </Row>
         {this.state.type === "chores" && (
           <ChoreForm refreshEvents={() => this.getEvents("events")} />
         )}
@@ -128,7 +141,7 @@ class MyCalendar extends Component {
 
 function MyIcon(props) {
   const style = {
-    maxHeight: props.height ? props.height : "50px",
+    maxHeight: props.height ? props.height : "65px",
   };
   return (
     <Link to={props.link}>

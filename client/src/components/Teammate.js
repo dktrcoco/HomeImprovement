@@ -19,7 +19,7 @@ function Teammate({ src, text, hrefGH, hrefLI }) {
       <div className="middle">
         <Quote text={text}></Quote>
       </div>
-      <Row>
+      <Row className="button-row">
         <GitHubBtn
           href={hrefGH}
           message="Github Profile"
