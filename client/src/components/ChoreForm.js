@@ -68,14 +68,14 @@ function ChoreForm() {
           onChange={handleInputChange}
           type="text"
           className="form-control"
-          name="choreOwner"
+          name="owner"
           placeholder="Who is responsible for this chore?"
         />
         <input
           onChange={handleInputChange}
-          type="date"
+          type="datetime-local"
           className="form-control"
-          name="choreDate"
+          name="date"
           placeholder="When does this chore need to be completed?"
         />
         <button

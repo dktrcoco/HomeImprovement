@@ -5,94 +5,94 @@ import Calendar from "../components/Calendar";
 import { Row, Col, Container, Card } from "react-bootstrap";
 
 function BillForm() {
-  // Setting Bills component's initial state
-  const [bills, setBills] = useState([]);
-  const [formObject, setFormObject] = useState({});
+	// Setting Bills component's initial state
+	const [bills, setBills] = useState([]);
+	const [formObject, setFormObject] = useState({});
 
-  // Load all bills and store them with setBills
-  useEffect(() => {
-    loadBills();
-  }, []);
+	// Load all bills and store them with setBills
+	useEffect(() => {
+		loadBills();
+	}, []);
 
-  // Load all bills and sets them to bills
-  function loadBills() {
-    BillAPI.getBills()
-      .then((res) => setBills(res.data))
-      .catch((err) => console.log(err));
-  }
+	// Load all bills and sets them to bills
+	function loadBills() {
+		BillAPI.getBills()
+			.then((res) => setBills(res.data))
+			.catch((err) => console.log(err));
+	}
 
-  // Deletes a bill from the database with a given id,
-  // then reloads bills from the db
-  function deleteBill(id) {
-    BillAPI.deleteBill(id)
-      .then((res) => loadBills())
-      .catch((err) => console.log(err));
-  }
+	// Deletes a bill from the database with a given id,
+	// then reloads bills from the db
+	function deleteBill(id) {
+		BillAPI.deleteBill(id)
+			.then((res) => loadBills())
+			.catch((err) => console.log(err));
+	}
 
-  // Handles updating component state when the user types
-  // into the input field
-  function handleInputChange(event) {
-    const { name, value } = event.target;
-    setFormObject({ ...formObject, [name]: value });
-  }
+	// Handles updating component state when the user types
+	// into the input field
+	function handleInputChange(event) {
+		const { name, value } = event.target;
+		setFormObject({ ...formObject, [name]: value });
+	}
 
-  // When the form is submitted, uses the BillAPI.saveBill
-  // method to save the bill data
-  // Then reloads bills from the database
-  function handleFormSubmit(event) {
-    event.preventDefault();
-    console.log(formObject);
-    if (formObject.bill && formObject.value && formObject.date) {
-      BillAPI.saveBill({
-        title: formObject.bill,
-        value: formObject.value,
-        date: formObject.date,
-        bill: formObject.bill
-      })
-        .then((res) => loadBills())
-        .catch((err) => console.log(err));
-    }
-    else {
-      alert("Fill out all fields!")
-    }
-  }
+	// When the form is submitted, uses the BillAPI.saveBill
+	// method to save the bill data
+	// Then reloads bills from the database
+	function handleFormSubmit(event) {
+		event.preventDefault();
+		console.log(formObject);
+		if (formObject.title && formObject.value && formObject.start) {
+			BillAPI.saveBill({
+				title: formObject.title,
+				value: formObject.value,
+				start: formObject.start,
+				end: formObject.start,
+			})
+				.then((res) => loadBills())
+				.catch((err) => console.log(err));
+		} else {
+			alert("Fill out all fields!");
+			console.log(formObject);
+		}
+	}
 
-  return (
-    <Container>
-      <form action="/api/bills" method="post">
-        <h2>Enter a Bill</h2>
-        <input
-          onChange={handleInputChange}
-          type="text"
-          className="form-control"
-          name="bill"
-          placeholder="What bill do you want to add?"
-        />
-        <input
-          onChange={handleInputChange}
-          type="value"
-          className="form-control"
-          name="value"
-          placeholder="How much is owed?"
-        />
-        <input
-          onChange={handleInputChange}
-          type="datetime-local"
-          className="form-control"
-          name="date"
-          placeholder="When is this bill due?"
-        />
-        <button
-          onClick={handleFormSubmit}
-          className="btn btn-lg btn-primary btn-block"
-          id="submit"
-          type="submit"
-        >
-          Submit
-        </button>
-      </form>
-    </Container>
-  );
+	return (
+		<Container>
+			<form action="/api/bills" method="post">
+				<h2>Enter a Bill</h2>
+				<input
+					onChange={handleInputChange}
+					type="text"
+					className="form-control"
+					name="title"
+					placeholder="What bill do you want to add?"
+				/>
+				<input
+					onChange={handleInputChange}
+					type="value"
+					className="form-control"
+					name="value"
+					placeholder="How much is owed?"
+				/>
+				<input
+					onChange={handleInputChange}
+					type="datetime-local"
+					className="form-control"
+					name="start"
+					placeholder="When is this bill due?"
+				/>
+				<button
+					onClick={handleFormSubmit}
+					className="btn btn-lg btn-primary btn-block"
+					id="submit"
+					type="submit"
+				>
+					Submit
+				</button>
+			</form>
+		</Container>
+	);
 }
 
 export default BillForm;
