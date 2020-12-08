@@ -1,0 +1,118 @@
+.navbar {
+    color: black;
+}
+
+.row {
+    color: black;
+}
+
+/* @import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700'); */
+/* @import 'bootstrap/dist/css/bootstrap.min.css'; */
+/* @import 'https://use.fontawesome.com/releases/v5.13.0/js/all.js'; */
+
+/* .header {
+    color: black;
+} */
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5);
+}
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: black;
+    text-align: left;
+    outline: black;
+    outline-width: 5px;
+    font-size: 30px;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+}
+
+.active, .collapsible:hover {
+    background-color: #555;
+}
+
+/* .resumeText {
+    font-size: 10px;
+} */
+
+li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.linked .git {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.resumeText {
+    font-size: 10px;
+}
+
+.gitText {
+    font-size: 10px;
+}
+
+.resume .resumeText {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;  
+}
+
+.resume:hover .resumeText {
+    visibility: visible;
+}
+
+.git .gitText {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+}
+
+.git:hover .gitText {
+    visibility: visible;
+}
+
+.linked .linkedText {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+}
+
+.linked:hover .linkedText {
+    visibility: visible;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row, Col, Container, Card, Button } from 'react-bootstrap';
 import GitHubBtn from './GitHubBtn';
+import LinkedinBtn from './LinkedinBtn';
 import Teammate from './Teammate';
 import Quote from './Quote';
 import "./TeammateStyle.css";
@@ -16,6 +17,8 @@ function Team() {
                 </Teammate>
                 <GitHubBtn href="https://github.com/swilson9894" message="Github Profile">
                 </GitHubBtn>
+                <LinkedinBtn href="" message="LinkedIn Profile">
+                </LinkedinBtn>
             </Card>
 
             <Card>
@@ -23,6 +26,8 @@ function Team() {
                 </Teammate>
                 <GitHubBtn href="https://github.com/dktrcoco" message="Github Profile">
                 </GitHubBtn>
+                <LinkedinBtn href="https://www.linkedin.com/in/christopherkabana" message="LinkedIn Profile">
+                </LinkedinBtn>
             </Card>
 
             <Card>
@@ -30,6 +35,8 @@ function Team() {
                 </Teammate>
                 <GitHubBtn href="https://github.com/Mdudzik92" message="Github Profile">
                 </GitHubBtn>
+                <LinkedinBtn href="https://www.linkedin.com/in/mattdudzik/" message="LinkedIn Profile">
+                </LinkedinBtn>
             </Card>
 
             <Card>
@@ -37,9 +44,12 @@ function Team() {
                 </Teammate>
                 <GitHubBtn href="https://github.com/CVade" message="Github Profile">
                 </GitHubBtn>
+                <LinkedinBtn href="https://www.linkedin.com/in/christian-vadevoulis-42a890109/" message="LinkedIn Profile">
+                </LinkedinBtn>
             </Card>
         </Container>
     );
 }
+
 
 export default Team;
