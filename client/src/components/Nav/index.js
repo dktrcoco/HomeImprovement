@@ -69,7 +69,7 @@ const Nav = (props) => {
         <Link
           className="nav-link text-info"
           activeClass="active-link"
-          to=""
+          to="#aboutUs"
           smooth={true}
           spy={true}
         >
