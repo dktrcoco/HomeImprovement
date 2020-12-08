@@ -5,7 +5,7 @@ import GitHubBtn from "./GitHubBtn";
 import LinkedInBtn from "./LinkedInBtn";
 import Teammate from "./Teammate";
 import Quote from "./Quote";
-import "./TeammateStyle.css";
+// import "./TeammateStyle.css";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 

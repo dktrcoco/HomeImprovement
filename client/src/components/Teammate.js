@@ -9,19 +9,13 @@ import LinkedInBtn from "./LinkedInBtn";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 function Teammate({ src, text, hrefGH, hrefLI }) {
-  // state would go here
   return (
     <Card className="card">
-      <ReactRoundedImage image={src} />
-      {/* <Col xs={6} md={4}>
-        <img
-          className="teammate"
-          src={src}
-          alt="centered image"
-          width="200"
-          height="200"
-          roundedCircle
-        /> */}
+      <ReactRoundedImage 
+      image={src}
+      roundedColor="black"
+      hoverColor="yellow" 
+      />
       <div className="middle">
         <Quote text={text}></Quote>
       </div>
@@ -31,14 +25,9 @@ function Teammate({ src, text, hrefGH, hrefLI }) {
           message="Github Profile"
           icon={faGithub}
         ></GitHubBtn>
-        
-        <LinkedInBtn 
-        href={hrefLI} 
-        icon={faLinkedin}
-        ></LinkedInBtn>
-      </Row>
 
-      {/* </Col> */}
+        <LinkedInBtn href={hrefLI} icon={faLinkedin}></LinkedInBtn>
+      </Row>
     </Card>
   );
 }
