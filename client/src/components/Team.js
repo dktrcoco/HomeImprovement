@@ -12,7 +12,7 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 function Team() {
   // state would go here
   return (
-    <Container className="teamContainer">
+    <Container className="teamContainer" id="aboutUs">
       <h1 className="meet">The Dream Team</h1>
       <Row>
         <Card>

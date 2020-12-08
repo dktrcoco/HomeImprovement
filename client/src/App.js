@@ -18,6 +18,7 @@ import EventForm from "./components/EventForm";
 import ChoreForm from "./components/ChoreForm";
 import BillForm from "./components/BillForm";
 import GroceryForm from "./components/GroceryForm";
+import Footer from "./components/Footer";
 import Button from "./components/NewButton";
 
 // import eventIcon from "./img/events.png";
@@ -91,6 +92,7 @@ function App() {
       <Test />
 
       <Team />
+      <Footer />
     </Router>
   );
 }
