@@ -5,7 +5,6 @@ import choreApi from "../utils/choreAPI";
 import eventApi from "../utils/eventAPI";
 import moment from "moment";
 import ChoreForm from "../components/_ChoreForm";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 const localizer = momentLocalizer(moment);
 
@@ -54,6 +53,7 @@ const FAKE_DB = {
     },
   ],
 };
+
 class MyCalendar extends Component {
   state = {
     events: [],
@@ -75,8 +75,9 @@ class MyCalendar extends Component {
     choreApi.getChores().then((res) => {
       const chores = res.data;
       console.log(chores);
-      this.setState({ chores });
-    });
+      this.setState({ chores }, () => console.log(this.state));
+	});
+	
       billApi.getBills().then((res) => {
         const bills = res.data;
         console.log(bills);
@@ -120,14 +121,10 @@ class MyCalendar extends Component {
 }
 
 function MyIcon(props) {
-  const style = {
-    maxHeight: props.height ? props.height : "50px",
-  };
-  return (
-    <Link to={props.link}>
-      <img src={props.src} alt="" style={style} />
-    </Link>
-  );
+	const style = {
+		maxHeight: props.height ? props.height : "50px",
+	},
+	return <img src={props.src} alt="" style={style} onClick={props.onClick} />
 }
 
 export default MyCalendar;
