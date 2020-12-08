@@ -5,14 +5,14 @@ import GitHubBtn from "./GitHubBtn";
 import LinkedInBtn from "./LinkedInBtn";
 import Teammate from "./Teammate";
 import Quote from "./Quote";
-// import "./TeammateStyle.css";
+import "./TeamStyle.css";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Team() {
   // state would go here
   return (
-    <Container>
+    <Container className="teamContainer">
       <h1 className="meet">The Dream Team</h1>
       <Row>
         <Card>
