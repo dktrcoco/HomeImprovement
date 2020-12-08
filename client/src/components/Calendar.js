@@ -5,6 +5,7 @@ import choreApi from "../utils/choreAPI";
 import eventApi from "../utils/eventAPI";
 import moment from "moment";
 import ChoreForm from "../components/_ChoreForm";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 const localizer = momentLocalizer(moment);
 
@@ -71,18 +72,23 @@ class MyCalendar extends Component {
       console.log(events);
       this.setState({ events }, () => console.log(this.state));
     });
+    choreApi.getChores().then((res) => {
+      const chores = res.data;
+      console.log(chores);
+      this.setState({ chores }, () => console.log(this.state));
+    });
 
     choreApi.getChores().then((res) => {
       const chores = res.data;
       console.log(chores);
       this.setState({ chores }, () => console.log(this.state));
-	});
-	
-      billApi.getBills().then((res) => {
-        const bills = res.data;
-        console.log(bills);
-        this.setState({ bills }, () => console.log(this.state));
-      });
+    });
+
+    billApi.getBills().then((res) => {
+      const bills = res.data;
+      console.log(bills);
+      this.setState({ bills }, () => console.log(this.state));
+    });
   }
 
   getEvents = async (type) => {
@@ -121,10 +127,21 @@ class MyCalendar extends Component {
 }
 
 function MyIcon(props) {
-	const style = {
-		maxHeight: props.height ? props.height : "50px",
-	},
-	return <img src={props.src} alt="" style={style} onClick={props.onClick} />
+  const style = {
+    maxHeight: props.height ? props.height : "50px",
+  };
+  return (
+    <Link to={props.link}>
+      <img src={props.src} alt="" style={style} />
+    </Link>
+  );
 }
+
+// function MyIcon(props) {
+// 	const style = {
+// 		maxHeight: props.height ? props.height : "50px",
+// 	};
+// 	return <img src={props.src} alt="" style={style} onClick={props.onClick} />
+// }
 
 export default MyCalendar;
