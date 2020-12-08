@@ -1,5 +1,25 @@
 .linkedin-btn {
-    float: right;
-    color: black;
-  }
+  float: right;
+  color: #0e76a8;
+}
 
+.linkedInText {
+  font-size: 15px;
+}
+
+.linkedIn .linkedInText {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  position: absolute;
+  z-index: 1;
+}
+
+.linkedIn:hover .linkedInText {
+  visibility: visible;
+}
