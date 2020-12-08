@@ -9,14 +9,11 @@ function GitHubBtn({ href }) {
   return (
     <>
       <a className="github-btn" href={href} target="_blank">
-        <i className="fab fa-github fa-3x">
+        <i className="fab fa-github fa-3x gitHub">
           <FontAwesomeIcon icon={faGithub} />
+          <span className="gitHubText">GitHub Profile</span>
         </i>
-        <span className="gitText"></span>
       </a>
-      {/* <a className="github-btn" href={href}>
-        {message}
-      </a> */}
     </>
   );
 }

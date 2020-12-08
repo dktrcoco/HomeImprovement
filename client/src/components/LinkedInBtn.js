@@ -7,14 +7,11 @@ function LinkedInBtn({ href }) {
   return (
     <>
       <a className="linkedin-btn" href={href} target="_blank">
-        <i className="fab fa-linkedin-in fa-3x">
-          <FontAwesomeIcon className="test" icon={faLinkedin} />
+        <i className="fab fa-linkedin-in fa-3x linkedIn">
+          <FontAwesomeIcon icon={faLinkedin} />
+          <span className="linkedInText">LinkedIn Profile</span>
         </i>
-        <span className="linkedText"></span>
       </a>
-      {/* <a className="linkedin-btn" href={href} icon={faLinkedin}>
-        {message}
-      </a> */}
     </>
   );
 }
