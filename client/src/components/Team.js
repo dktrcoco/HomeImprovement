@@ -7,7 +7,7 @@ import Teammate from "./Teammate";
 import Quote from "./Quote";
 import "./TeammateStyle.css";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Team() {
   // state would go here
