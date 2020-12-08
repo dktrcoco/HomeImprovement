@@ -53,6 +53,7 @@ const FAKE_DB = {
 		},
 	],
 };
+
 class MyCalendar extends Component {
 	state = {
 		events: [],
@@ -71,7 +72,7 @@ class MyCalendar extends Component {
 		choreApi.getChores().then((res) => {
 			const chores = res.data;
 			console.log(chores);
-			this.setState({ chores });
+			this.setState({ chores }, () => console.log(this.state));
 		});
 
 		billApi.getBills().then((res) => {

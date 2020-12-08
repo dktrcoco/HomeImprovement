@@ -5,9 +5,12 @@ const Schema = mongoose.Schema;
 // a mixture of front and back end
 // front end might be easier to implement
 const choreSchema = new Schema({
-  chore: { type: String, required: true },
-  owner: { type: String, required: true },
-  date: { type: Date, default: Date.now }
+	title: { type: String, required: true },
+	name: { type: String, required: true },
+	start: { type: Date, default: Date.now },
+	end: Date,
+	allDay: { type: Boolean, default: true },
+	resource: String,
 });
 
 const Chore = mongoose.model("Chore", choreSchema);
