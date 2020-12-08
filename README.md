@@ -1,5 +1,4 @@
-# HomeImprovement
-Project 3
+# Abode
 
 Link of Deployed App: https://home-management-app.herokuapp.com/
 
@@ -34,7 +33,6 @@ No installation is required, simply navigate to the deployed app.
 
 If you want to check out the code, you will need to clone the repo and run 'npm install' to ensure the module packages/dependencies are installed.
 
-
 ## Contribution
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
@@ -68,6 +66,12 @@ You can also reach us through GitHub directly via our accounts (listed above).
 -Add multiple authentication level types
 -SMS messages
 
--Ability to add important events to the calendar (birthdays, vacations, etc)
-
 ## Retrospective
+
+-Shonta: 
+
+-Chris:
+
+-Matt:
+
+-Christian:
