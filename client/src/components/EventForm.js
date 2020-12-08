@@ -42,13 +42,20 @@ function EventForm() {
   function handleFormSubmit(event) {
     event.preventDefault();
     console.log(formObject);
-    if (formObject.event && formObject.eventDate) {
+    if (formObject.event && formObject.start && formObject.end) {
       EventAPI.saveEvent({
-        event: formObject.event,
-        date: formObject.eventDate,
+        title: formObject.event,
+        start: formObject.start,
+        end: formObject.end,
+        allDay: true,
+        resource: "eat",
+        event: formObject.event
       })
         .then((res) => loadEvents())
         .catch((err) => console.log(err));
+    }
+    else {
+      alert("Fill out all fields!")
     }
   }
 
@@ -65,10 +72,17 @@ function EventForm() {
         />
         <input
           onChange={handleInputChange}
-          type="date"
+          type="datetime-local"
           className="form-control"
-          name="eventDate"
-          placeholder="When is this event taking place?"
+          name="start"
+          placeholder="When does the event start?"
+        />
+        <input
+          onChange={handleInputChange}
+          type="datetime-local"
+          className="form-control"
+          name="end"
+          placeholder="When does the event end?"
         />
         <button
           onClick={handleFormSubmit}

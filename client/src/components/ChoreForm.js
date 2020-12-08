@@ -3,6 +3,7 @@ import DeleteBtn from "../components/DeleteBtn/index";
 import ChoreAPI from "../utils/choreAPI";
 import Calendar from "../components/Calendar";
 import { Row, Col, Container, Card } from "react-bootstrap";
+
 function ChoreForm() {
   // Setting Chores component's initial state
   const [chores, setChores] = useState([]);
@@ -67,14 +68,14 @@ function ChoreForm() {
           onChange={handleInputChange}
           type="text"
           className="form-control"
-          name="choreOwner"
+          name="owner"
           placeholder="Who is responsible for this chore?"
         />
         <input
           onChange={handleInputChange}
-          type="date"
+          type="datetime-local"
           className="form-control"
-          name="choreDate"
+          name="date"
           placeholder="When does this chore need to be completed?"
         />
         <button
