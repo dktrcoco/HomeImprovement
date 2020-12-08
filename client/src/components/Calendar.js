@@ -78,11 +78,11 @@ class MyCalendar extends Component {
       this.setState({ chores }, () => console.log(this.state));
     });
 
-    choreApi.getChores().then((res) => {
-      const chores = res.data;
-      console.log(chores);
-      this.setState({ chores }, () => console.log(this.state));
-    });
+		choreApi.getChores().then((res) => {
+			const chores = res.data;
+			console.log(chores);
+			this.setState({ chores }, () => console.log(this.state));
+		});
 
     billApi.getBills().then((res) => {
       const bills = res.data;
