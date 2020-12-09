@@ -1,5 +1,5 @@
 import React from 'react';
-import "./TeammateStyle.css";
+import "../styles/TeammateStyle.css";
 
 function Quote({ text }) {
     return (

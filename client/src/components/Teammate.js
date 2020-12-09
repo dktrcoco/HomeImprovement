@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Row, Col, Container, Card, Button } from "react-bootstrap";
-import "./TeammateStyle.css";
+import "../styles/TeammateStyle.css";
 import Quote from "./Quote";
 import ReactRoundedImage from "react-rounded-image";
 import GitHubBtn from "./GitHubBtn";

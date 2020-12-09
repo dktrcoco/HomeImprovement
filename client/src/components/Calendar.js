@@ -6,7 +6,7 @@ import choreApi from "../utils/choreAPI";
 import eventApi from "../utils/eventAPI";
 import moment from "moment";
 import ChoreForm from "../components/_ChoreForm";
-import "./CalendarStyle.css";
+import "../styles/CalendarStyle.css";
 import "react-big-calendar/lib/css/react-big-calendar.css"
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
