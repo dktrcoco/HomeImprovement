@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 // import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
@@ -27,6 +27,21 @@ import Button from "./components/NewButton";
 // import groceryIcon from "./img/groceries.png";
 
 function App() {
+  const [currentPage, setCurrentPage] = useState();
+  const featureRef = useRef(null);
+  const teamRef = useRef(null);
+
+  // this will fire anytime the currentPage changes
+  useEffect(() => {
+    if (currentPage === "features" && featureRef.current) {
+      featureRef.current.scrollIntoView();
+      console.log("aarhg");
+    } else if (currentPage === "team" && teamRef.current) {
+      teamRef.current.scrollIntoView();
+      console.log("1234");
+    }
+  }, [currentPage]);
+
   return (
     <Router>
       <div>
@@ -54,10 +69,15 @@ function App() {
 					</Route>
 				</Switch> */}
       </div>
+      {/* <div> */}
+      <Nav setCurrentPage={setCurrentPage} />
       <div>
-        <Nav />
+        <p>TESTING</p>
+        {currentPage}
+      </div>
+      <div>
         <MyCalendar />
-        <Features />
+        <Features ref={featureRef} />
         {/* <Button img={eventIcon} href="/events" />
         <Button img={choreIcon} href="/chores" />
         <Button img={billIcon} href="/bills" />
@@ -91,7 +111,7 @@ function App() {
       </div>
       <Test />
 
-      <Team />
+      <Team ref={teamRef} />
       <Footer />
     </Router>
   );
