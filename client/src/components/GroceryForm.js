@@ -54,7 +54,7 @@ function GroceryForm() {
 
   return (
     <Container>
-      <Row>
+      <Col className="groceryRow">
         <form action="/api/groceries" method="post">
           <h2>Enter a Grocery Item</h2>
           <input
@@ -73,27 +73,26 @@ function GroceryForm() {
             Submit
           </button>
         </form>
-      </Row>
-
-      <Row>
-        <Col size="md-12 sm-12">
-          <h1>Groceries On My List</h1>
-          {groceries.length ? (
-            <ul>
-              {groceries.map((grocery) => (
-                <div key={grocery._id}>
-                  <Link to={"/grocery/" + grocery._id}>
-                    {grocery.item}
-                  </Link>
-                  <DeleteBtn onClick={() => deleteGrocery(grocery._id)} />
-                </div>
-              ))}
-            </ul>
-          ) : (
-            <h3>No Results to Display</h3>
-          )}
-        </Col>
-      </Row>
+      </Col>
+      <Col>
+        <Row>
+          <Col>
+            <h1>Groceries On My List</h1>
+            {groceries.length ? (
+              <ul>
+                {groceries.map((grocery) => (
+                  <div key={grocery._id}>
+                    <Link to={"/grocery/" + grocery._id}>{grocery.item}</Link>
+                    <DeleteBtn onClick={() => deleteGrocery(grocery._id)} />
+                  </div>
+                ))}
+              </ul>
+            ) : (
+              <h3>No Results to Display</h3>
+            )}
+          </Col>
+        </Row>
+      </Col>
     </Container>
   );
 }
