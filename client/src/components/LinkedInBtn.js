@@ -1,7 +1,7 @@
 import React from "react";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./LinkedInBtnStyle.css";
+import "../styles/LinkedInBtnStyle.css";
 
 function LinkedInBtn({ href }) {
   return (
