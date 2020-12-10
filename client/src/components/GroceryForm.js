@@ -1,24 +1,53 @@
 import React, { useState, useEffect } from "react";
 import DeleteBtn from "../components/DeleteBtn/index";
 import GroceryAPI from "../utils/groceryAPI";
-import Calendar from "../components/Calendar";
+import BillAPI from "../utils/billAPI";
+import ChoreAPI from "../utils/choreAPI";
+import EventAPI from "../utils/eventAPI";
+import Calendar from "../components/MyCalendar";
+import Features from "../components/Features";
 import { Link } from "react-router-dom";
 import { Row, Col, Container, Card } from "react-bootstrap";
 
 function GroceryForm() {
   // Setting Groceries component's initial state
   const [groceries, setGroceries] = useState([]);
+  const [bills, setBills] = useState([]);
+  const [events, setEvents] = useState([]);
+  const [chores, setChores] = useState([]);
   const [formObject, setFormObject] = useState({});
 
   // Load all Groceries and store them with setGroceries
   useEffect(() => {
     loadGroceries();
+    loadBills();
+    loadChores();
+    loadEvents();
   }, []);
 
   // Load all groceries and sets them to groceries
   function loadGroceries() {
     GroceryAPI.getGroceries()
       .then((res) => setGroceries(res.data))
+      .catch((err) => console.log(err));
+  }
+
+  // Load all bills and sets them to bills
+  function loadBills() {
+    BillAPI.getBills()
+      .then((res) => setBills(res.data))
+      .catch((err) => console.log(err));
+  }
+
+  function loadChores() {
+    ChoreAPI.getChores()
+      .then((res) => setChores(res.data))
+      .catch((err) => console.log(err));
+  }
+
+  function loadEvents() {
+    EventAPI.getEvents()
+      .then((res) => setEvents(res.data))
       .catch((err) => console.log(err));
   }
 
@@ -54,6 +83,8 @@ function GroceryForm() {
 
   return (
     <Container>
+      <Calendar events={events} bills={bills} chores={chores}></Calendar>
+      <Features />
       <Col className="groceryRow">
         <form action="/api/groceries" method="post">
           <h2>Enter a Grocery Item</h2>

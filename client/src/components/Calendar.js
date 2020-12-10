@@ -7,7 +7,8 @@ import eventApi from "../utils/eventAPI";
 import moment from "moment";
 import ChoreForm from "../components/_ChoreForm";
 import "../styles/CalendarStyle.css";
-import "react-big-calendar/lib/css/react-big-calendar.css"
+import "react-big-calendar/lib/css/react-big-calendar.css";
+import NewCalendar from "./MyCalendar";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 const localizer = momentLocalizer(moment);
@@ -103,7 +104,13 @@ class MyCalendar extends Component {
     console.log(this.state.type);
     return (
       <div>
-        <Calendar
+        <NewCalendar
+          events={this.state.events}
+          bills={this.state.bills}
+          chores={this.state.chores}
+          getEvents={this.getEvents}
+        ></NewCalendar>
+        {/* <Calendar
           localizer={localizer}
           // events={this.state.events}
           events={[
@@ -134,7 +141,7 @@ class MyCalendar extends Component {
         </Row>
         {this.state.type === "chores" && (
           <ChoreForm refreshEvents={() => this.getEvents("events")} />
-        )}
+        )} */}
       </div>
     );
   }

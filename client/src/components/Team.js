@@ -45,7 +45,8 @@ function Team() {
         <Card>
           <Teammate
             src="https://ca.slack-edge.com/T015J3MGCSG-U015GU3KKAR-6a8e9deda116-512"
-            text="insert Christian quote or phrase here"
+            text="Give a man a program, frustrate him for a day.
+            Teach a man to program, frustrate him for a lifetime."
             hrefGH="https://github.com/CVade"
             hrefLI="https://www.linkedin.com/in/christian-vadevoulis-42a890109/"
           ></Teammate>
