@@ -1,23 +1,43 @@
 import React, { useState, useEffect } from "react";
 import DeleteBtn from "../components/DeleteBtn/index";
 import EventAPI from "../utils/eventAPI";
-import Calendar from "../components/Calendar";
+import BillAPI from "../utils/billAPI";
+import ChoreAPI from "../utils/choreAPI";
+import Calendar from "../components/MyCalendar";
+import Features from "../components/Features";
 import { Row, Col, Container, Card } from "react-bootstrap";
 
 function EventForm() {
   // Setting Events component's initial state
   const [events, setEvents] = useState([]);
+  const [bills, setBills] = useState([]);
+  const [chores, setChores] = useState([]);
   const [formObject, setFormObject] = useState({});
 
   // Load all events and store them with setEvents
   useEffect(() => {
     loadEvents();
+    loadBills();
+    loadChores();
   }, []);
 
   // Load all events and sets them to events
   function loadEvents() {
     EventAPI.getEvents()
       .then((res) => setEvents(res.data))
+      .catch((err) => console.log(err));
+  }
+
+  // Load all bills and sets them to bills
+  function loadBills() {
+    BillAPI.getBills()
+      .then((res) => setBills(res.data))
+      .catch((err) => console.log(err));
+  }
+
+  function loadChores() {
+    ChoreAPI.getChores()
+      .then((res) => setChores(res.data))
       .catch((err) => console.log(err));
   }
 
@@ -49,18 +69,19 @@ function EventForm() {
         end: formObject.end,
         allDay: true,
         resource: "eat",
-        event: formObject.event
+        event: formObject.event,
       })
         .then((res) => loadEvents())
         .catch((err) => console.log(err));
-    }
-    else {
-      alert("Fill out all fields!")
+    } else {
+      alert("Fill out all fields!");
     }
   }
 
   return (
     <Container>
+      <Calendar events={events} bills={bills} chores={chores}></Calendar>
+      <Features />
       <form action="/api/events" method="post">
         <h2>Enter an Event</h2>
         <input

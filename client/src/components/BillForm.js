@@ -1,18 +1,25 @@
 import React, { useState, useEffect } from "react";
 import DeleteBtn from "../components/DeleteBtn/index";
 import BillAPI from "../utils/billAPI";
-import Calendar from "../components/Calendar";
+import Calendar from "../components/MyCalendar";
 import Features from "../components/Features";
 import { Row, Col, Container, Card } from "react-bootstrap";
+import ChoreAPI from "../utils/choreAPI";
+import EventAPI from "../utils/eventAPI";
+
 
 function BillForm() {
   // Setting Bills component's initial state
   const [bills, setBills] = useState([]);
+  const [events, setEvents] = useState([]);
+  const [chores, setChores] = useState([]);
   const [formObject, setFormObject] = useState({});
 
   // Load all bills and store them with setBills
   useEffect(() => {
     loadBills();
+    loadChores();
+    loadEvents();
   }, []);
 
   // Load all bills and sets them to bills
@@ -20,6 +27,18 @@ function BillForm() {
     BillAPI.getBills()
       .then((res) => setBills(res.data))
       .catch((err) => console.log(err));
+  }
+
+  function loadChores() {
+    ChoreAPI.getChores()
+    .then((res) => setChores(res.data))
+    .catch((err) => console.log(err))
+  }
+
+  function loadEvents() {
+    EventAPI.getEvents()
+    .then((res) => setEvents(res.data))
+    .catch((err) => console.log(err))
   }
 
   // Deletes a bill from the database with a given id,
@@ -60,8 +79,12 @@ function BillForm() {
 
   return (
     <Container>
-      {/* <Calendar bills={bills} />
-      <Features /> */}
+      <Calendar
+          events={events}
+          bills={bills}
+          chores={chores}
+        ></Calendar>
+      <Features />
       <form action="/api/bills" method="post">
         <h2>Enter a Bill</h2>
         <input

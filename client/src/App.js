@@ -9,7 +9,7 @@ import Signup from "./components/Signup";
 import Nav from "./components/Nav";
 
 // importing the calendar component
-import MyCalendar from "./components/Calendar";
+// import MyCalendar from "./components/Calendar";
 
 // importing the forms of what we're tracking
 import Features from "./components/Features";
@@ -36,6 +36,7 @@ function App() {
   const teamRef = useRef(null);
 
   // this will fire anytime the currentPage changes
+  // only fires the first time the page loads
   useEffect(() => {
     if (currentPage === "features" && featureRef.current) {
       featureRef.current.scrollIntoView();
@@ -54,10 +55,12 @@ function App() {
         {currentPage}
       </div>
       <div>
-        <MyCalendar />
-        <Features ref={featureRef} />
+        {/* the calendar component is no longer needed here
+        because it is imbedded in each of the form files */}
+        {/* <MyCalendar />
+        <Features ref={featureRef} /> */}
         <Switch>
-          <Route exact path="/" component={Login} />
+          <Route exact path="/" component={BillForm} />
           <Route path="/sign-in" component={Login} />
           <Route path="/sign-up" component={Signup} />
           <Route path="/bills" component={BillForm} />
