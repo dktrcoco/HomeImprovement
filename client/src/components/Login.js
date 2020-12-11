@@ -1,35 +1,40 @@
-import React from 'react';
-// import "/login.css";
+import React from "react";
+import { useGoogleLogin } from "react-google-login";
+
+// refresh token
+import { refreshTokenSetup } from "../utils/refreshToken";
+
+const clientId =
+	"111239797672-3lvrii9bgdpun27maknmt1ahrdt0p5tv.apps.googleusercontent.com";
 
 function Login() {
-    return (
-        // <p>Login</p>
-        <form>
-            <h3>Sign In</h3>
+	const onSuccess = (res) => {
+		console.log("Login Success: currentUser:", res.profileObj);
+		alert(
+			`Logged in successfully welcome ${res.profileObj.name} 😍. \n See console for full profile object.`,
+		);
+		refreshTokenSetup(res);
+	};
 
-            <div className="form-group">
-                <label>Email address</label>
-                <input type="email" className="form-control" placeholder="Enter email" />
-            </div>
+	const onFailure = (res) => {
+		console.log("Login failed: res:", res);
+		alert(`Failed to login. 😢 Please try again`);
+	};
 
-            <div className="form-group">
-                <label>Password</label>
-                <input type="password" className="form-control" placeholder="Enter password" />
-            </div>
+	const { signIn } = useGoogleLogin({
+		onSuccess,
+		onFailure,
+		clientId,
+		isSignedIn: true,
+		accessType: "offline",
+	});
 
-            <div className="form-group">
-                <div className="custom-control custom-checkbox">
-                    <input type="checkbox" className="custom-control-input" id="customCheck1" />
-                    <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
-                </div>
-            </div>
-
-            <button type="submit" className="btn btn-primary btn-block">Submit</button>
-            <p className="forgot-password text-right">
-                Forgot <a href="#">password?</a>
-            </p>
-        </form>
-    )
+	return (
+		<button onClick={signIn} className="button">
+			<img src="./assets/img/google.svg" width="18px" height="18px"></img>
+			<span className="buttonText">Sign in with Google</span>
+		</button>
+	);
 }
 
 export default Login;
