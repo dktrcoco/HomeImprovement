@@ -1,8 +1,8 @@
 import React from "react";
 import { useGoogleLogin } from "react-google-login";
-import { Redirect, useHistory } from 'react-router-dom';
-import Button from './NewButton';
-import { BrowserRouter, Route, Link, NavLink } from 'react-router-dom';
+import { Redirect, useHistory } from "react-router-dom";
+import Button from "./NewButton";
+import { BrowserRouter, Route, Link, NavLink } from "react-router-dom";
 
 // refresh token
 import { refreshTokenSetup } from "../utils/refreshToken";
@@ -11,7 +11,6 @@ const clientId =
   "111239797672-3lvrii9bgdpun27maknmt1ahrdt0p5tv.apps.googleusercontent.com";
 
 function Login() {
-
   const onSuccess = (res) => {
     console.log("Login Success: currentUser:", res.profileObj);
     alert(
@@ -26,28 +25,28 @@ function Login() {
   };
 
   const onSignin = () => {
-	  return(
-		  <NavLink
-		  className="signinBtn"
-		  to="/bills"
-		  >
-			  Ironman
-		  </NavLink>
-	  )
+    return (
+      <NavLink className="signinBtn" to="/bills">
+        Ironman
+      </NavLink>
+    );
   };
 
   const { signIn } = useGoogleLogin({
     onSuccess,
-	onFailure,
-	// onSignin,
+    onFailure,
+    // onSignin,
     clientId,
     isSignedIn: true,
-	accessType: "offline"
+    accessType: "offline",
   });
 
   return (
     <div>
-		<Button href="/bills">Redirect</Button>
+      <div>
+        <Button href="/bills">Redirect</Button>
+      </div>
+
       <button onClick={signIn} className="button">
         <img src="./assets/img/google.svg" width="18px" height="18px"></img>
         <span className="buttonText">Sign in with Google</span>

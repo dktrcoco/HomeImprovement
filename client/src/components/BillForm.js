@@ -3,6 +3,7 @@ import DeleteBtn from "../components/DeleteBtn/index";
 import BillAPI from "../utils/billAPI";
 import Calendar from "../components/MyCalendar";
 import Features from "../components/Features";
+import { Link } from "react-router-dom";
 import { Row, Col, Container, Card } from "react-bootstrap";
 import ChoreAPI from "../utils/choreAPI";
 import EventAPI from "../utils/eventAPI";
@@ -31,14 +32,14 @@ function BillForm() {
 
   function loadChores() {
     ChoreAPI.getChores()
-    .then((res) => setChores(res.data))
-    .catch((err) => console.log(err))
+      .then((res) => setChores(res.data))
+      .catch((err) => console.log(err));
   }
 
   function loadEvents() {
     EventAPI.getEvents()
-    .then((res) => setEvents(res.data))
-    .catch((err) => console.log(err))
+      .then((res) => setEvents(res.data))
+      .catch((err) => console.log(err));
   }
 
   // Deletes a bill from the database with a given id,
@@ -79,44 +80,61 @@ function BillForm() {
 
   return (
     <Container>
-      <Calendar
-          events={events}
-          bills={bills}
-          chores={chores}
-        ></Calendar>
+      <Calendar events={events} bills={bills} chores={chores}></Calendar>
       <Features />
-      <form action="/api/bills" method="post">
-        <h2>Enter a Bill</h2>
-        <input
-          onChange={handleInputChange}
-          type="text"
-          className="form-control"
-          name="title"
-          placeholder="What bill do you want to add?"
-        />
-        <input
-          onChange={handleInputChange}
-          type="value"
-          className="form-control"
-          name="value"
-          placeholder="How much is owed?"
-        />
-        <input
-          onChange={handleInputChange}
-          type="datetime-local"
-          className="form-control"
-          name="start"
-          placeholder="When is this bill due?"
-        />
-        <button
-          onClick={handleFormSubmit}
-          className="btn btn-lg btn-primary btn-block submitbtn"
-          id="submit"
-          type="submit"
-        >
-          Submit
-        </button>
-      </form>
+      <Col>
+        <form action="/api/bills" method="post">
+          <h2>Enter a Bill</h2>
+          <input
+            onChange={handleInputChange}
+            type="text"
+            className="form-control"
+            name="title"
+            placeholder="What bill do you want to add?"
+          />
+          <input
+            onChange={handleInputChange}
+            type="value"
+            className="form-control"
+            name="value"
+            placeholder="How much is owed?"
+          />
+          <input
+            onChange={handleInputChange}
+            type="datetime-local"
+            className="form-control"
+            name="start"
+            placeholder="When is this bill due?"
+          />
+          <button
+            onClick={handleFormSubmit}
+            className="btn btn-lg btn-primary btn-block submitbtn"
+            id="submit"
+            type="submit"
+          >
+            Submit
+          </button>
+        </form>
+      </Col>
+      <Col>
+        <Row>
+          <Col>
+            <h1>Bills On My List</h1>
+            {bills.length ? (
+              <ul>
+                {bills.map((bill) => (
+                  <div key={bill._id}>
+                    <Link to={"/bill/" + bill._id}>{bill.title} with ${bill.value} due</Link>
+                    <DeleteBtn onClick={() => deleteBill(bill._id)} />
+                  </div>
+                ))}
+              </ul>
+            ) : (
+              <h3>No Results to Display</h3>
+            )}
+          </Col>
+        </Row>
+      </Col>
     </Container>
   );
 }

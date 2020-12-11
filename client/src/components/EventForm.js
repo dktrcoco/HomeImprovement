@@ -5,6 +5,7 @@ import BillAPI from "../utils/billAPI";
 import ChoreAPI from "../utils/choreAPI";
 import Calendar from "../components/MyCalendar";
 import Features from "../components/Features";
+import { Link } from "react-router-dom";
 import { Row, Col, Container, Card } from "react-bootstrap";
 import "../styles/EventFormStyle.css";
 
@@ -83,38 +84,59 @@ function EventForm() {
     <Container>
       <Calendar events={events} bills={bills} chores={chores}></Calendar>
       <Features />
-      <form action="/api/events" method="post">
-        <h2>Enter an Event</h2>
-        <input
-          onChange={handleInputChange}
-          type="text"
-          className="form-control"
-          name="event"
-          placeholder="What event do you want to add?"
-        />
-        <input
-          onChange={handleInputChange}
-          type="datetime-local"
-          className="form-control"
-          name="start"
-          placeholder="When does the event start?"
-        />
-        <input
-          onChange={handleInputChange}
-          type="datetime-local"
-          className="form-control"
-          name="end"
-          placeholder="When does the event end?"
-        />
-        <button
-          onClick={handleFormSubmit}
-          className="btn btn-lg btn-primary btn-block submitbtn"
-          id="submit"
-          type="submit"
-        >
-          Submit
-        </button>
-      </form>
+      <Col>
+        <form action="/api/events" method="post">
+          <h2>Enter an Event</h2>
+          <input
+            onChange={handleInputChange}
+            type="text"
+            className="form-control"
+            name="event"
+            placeholder="What event do you want to add?"
+          />
+          <input
+            onChange={handleInputChange}
+            type="datetime-local"
+            className="form-control"
+            name="start"
+            placeholder="When does the event start?"
+          />
+          <input
+            onChange={handleInputChange}
+            type="datetime-local"
+            className="form-control"
+            name="end"
+            placeholder="When does the event end?"
+          />
+          <button
+            onClick={handleFormSubmit}
+            className="btn btn-lg btn-primary btn-block submitbtn"
+            id="submit"
+            type="submit"
+          >
+            Submit
+          </button>
+        </form>
+      </Col>
+      <Col>
+        <Row>
+          <Col>
+            <h1>Events On My List</h1>
+            {events.length ? (
+              <ul>
+                {events.map((event) => (
+                  <div key={event._id}>
+                    <Link to={"/event/" + event._id}>{event.title}</Link>
+                    <DeleteBtn onClick={() => deleteEvent(event._id)} />
+                  </div>
+                ))}
+              </ul>
+            ) : (
+              <h3>No Results to Display</h3>
+            )}
+          </Col>
+        </Row>
+      </Col>
     </Container>
   );
 }
