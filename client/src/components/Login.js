@@ -31,13 +31,7 @@ function Login() {
 
 	return (
 		<button onClick={signIn} className="button">
-			<img
-				src="./assets/img/google.svg"
-				class="icon"
-				width="18px"
-				height="18px"
-			></img>
-
+			<img src="./assets/img/google.svg" width="18px" height="18px"></img>
 			<span className="buttonText">Sign in with Google</span>
 		</button>
 	);
