@@ -1,3 +1,7 @@
+* {
+  z-index: -1;
+}
+
 .features {
     align-items: center;
     width: auto;
