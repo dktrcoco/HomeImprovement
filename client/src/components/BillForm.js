@@ -6,7 +6,7 @@ import Features from "../components/Features";
 import { Row, Col, Container, Card } from "react-bootstrap";
 import ChoreAPI from "../utils/choreAPI";
 import EventAPI from "../utils/eventAPI";
-
+import "../styles/BillFormStyle.css";
 
 function BillForm() {
   // Setting Bills component's initial state
@@ -110,7 +110,7 @@ function BillForm() {
         />
         <button
           onClick={handleFormSubmit}
-          className="btn btn-lg btn-primary btn-block"
+          className="btn btn-lg btn-primary btn-block submitbtn"
           id="submit"
           type="submit"
         >

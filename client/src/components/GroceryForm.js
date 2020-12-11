@@ -8,6 +8,7 @@ import Calendar from "../components/MyCalendar";
 import Features from "../components/Features";
 import { Link } from "react-router-dom";
 import { Row, Col, Container, Card } from "react-bootstrap";
+import "../styles/GroceryFormStyle.css";
 
 function GroceryForm() {
   // Setting Groceries component's initial state
@@ -97,7 +98,7 @@ function GroceryForm() {
           />
           <button
             onClick={handleFormSubmit}
-            className="btn btn-lg btn-primary btn-block"
+            className="btn btn-lg btn-primary btn-block submitbtn"
             id="submit"
             type="submit"
           >
