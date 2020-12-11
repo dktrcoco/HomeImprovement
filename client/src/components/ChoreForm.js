@@ -5,6 +5,7 @@ import EventAPI from "../utils/eventAPI";
 import BillAPI from "../utils/billAPI";
 import Features from "../components/Features";
 import Calendar from "../components/MyCalendar";
+import { Link } from "react-router-dom";
 import { Row, Col, Container, Card } from "react-bootstrap";
 import "../styles/ChoreFormStyle.css";
 
@@ -79,38 +80,61 @@ function ChoreForm() {
     <Container>
       <Calendar events={events} bills={bills} chores={chores}></Calendar>
       <Features />
-      <form action="/api/chores" method="post">
-        <h2>Enter a Chore</h2>
-        <input
-          onChange={handleInputChange}
-          type="text"
-          className="form-control"
-          name="title"
-          placeholder="What chore do you want to add?"
-        />
-        <input
-          onChange={handleInputChange}
-          type="text"
-          className="form-control"
-          name="name"
-          placeholder="Who is responsible for this chore?"
-        />
-        <input
-          onChange={handleInputChange}
-          type="datetime-local"
-          className="form-control"
-          name="start"
-          placeholder="When does this chore need to be completed?"
-        />
-        <button
-          onClick={handleFormSubmit}
-          className="btn btn-lg btn-primary btn-block submitbtn"
-          id="submit"
-          type="submit"
-        >
-          Submit
-        </button>
-      </form>
+      <Col>
+        <form action="/api/chores" method="post">
+          <h2>Enter a Chore</h2>
+          <input
+            onChange={handleInputChange}
+            type="text"
+            className="form-control"
+            name="title"
+            placeholder="What chore do you want to add?"
+          />
+          <input
+            onChange={handleInputChange}
+            type="text"
+            className="form-control"
+            name="name"
+            placeholder="Who is responsible for this chore?"
+          />
+          <input
+            onChange={handleInputChange}
+            type="datetime-local"
+            className="form-control"
+            name="start"
+            placeholder="When does this chore need to be completed?"
+          />
+          <button
+            onClick={handleFormSubmit}
+            className="btn btn-lg btn-primary btn-block submitbtn"
+            id="submit"
+            type="submit"
+          >
+            Submit
+          </button>
+        </form>
+      </Col>
+      <Col>
+        <Row>
+          <Col>
+            <h1>Chores On My List</h1>
+            {chores.length ? (
+              <ul>
+                {chores.map((chore) => (
+                  <div key={chore._id}>
+                    <Link to={"/chore/" + chore._id}>
+                      {chore.title} to be done by {chore.name}
+                    </Link>
+                    <DeleteBtn onClick={() => deleteChore(chore._id)} />
+                  </div>
+                ))}
+              </ul>
+            ) : (
+              <h3>No Results to Display</h3>
+            )}
+          </Col>
+        </Row>
+      </Col>
     </Container>
   );
 }
