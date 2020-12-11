@@ -4,7 +4,7 @@ import { List, ListItem } from "../List";
 import Navbar from "react-bootstrap/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import { Container } from "react-bootstrap";
-// import "./style.css";
+import "./style.css";
 
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
@@ -24,7 +24,7 @@ const Nav = (props) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light rounded">
       <a className="navbar-brand text-info font-weight-bolder" href="/">
-        <span className="">Abode</span>
+        <span className="title">Abode</span>
       </a>
       <button
         className="custom-toggler navbar-toggler"
@@ -43,6 +43,14 @@ const Nav = (props) => {
         className={`${isNavCollapsed ? "collapse" : ""} navbar-collapse`}
         id="navbarsExample09"
       >
+        <div className="description">
+          <p>
+            Abode simiplifies your life by providing a single location to keep track
+            of all of the important things in your life. Track your bills, important events,
+            chores and tasks to be done, and even a list of groceries you need to buy!
+            Abode instills order to a disordered world.
+          </p>
+        </div>
         <Link
           className="nav-link text-info"
           activeClass="active-link"

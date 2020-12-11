@@ -6,6 +6,7 @@ import BillAPI from "../utils/billAPI";
 import Features from "../components/Features";
 import Calendar from "../components/MyCalendar";
 import { Row, Col, Container, Card } from "react-bootstrap";
+import "../styles/ChoreFormStyle.css";
 
 function ChoreForm() {
   // Setting Chores component's initial state
@@ -103,7 +104,7 @@ function ChoreForm() {
         />
         <button
           onClick={handleFormSubmit}
-          className="btn btn-lg btn-primary btn-block"
+          className="btn btn-lg btn-primary btn-block submitbtn"
           id="submit"
           type="submit"
         >

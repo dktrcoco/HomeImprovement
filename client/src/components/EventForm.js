@@ -6,6 +6,7 @@ import ChoreAPI from "../utils/choreAPI";
 import Calendar from "../components/MyCalendar";
 import Features from "../components/Features";
 import { Row, Col, Container, Card } from "react-bootstrap";
+import "../styles/EventFormStyle.css";
 
 function EventForm() {
   // Setting Events component's initial state
@@ -107,7 +108,7 @@ function EventForm() {
         />
         <button
           onClick={handleFormSubmit}
-          className="btn btn-lg btn-primary btn-block"
+          className="btn btn-lg btn-primary btn-block submitbtn"
           id="submit"
           type="submit"
         >

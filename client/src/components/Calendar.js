@@ -100,6 +100,23 @@ class MyCalendar extends Component {
     this.setState({ type }, () => this.setState({ events: FAKE_DB[type] }));
   };
 
+  // trying to set up different colors for different categories
+  eventStyleGetter = function(event, start, end, isSelected) {
+    console.log(event);
+    var backgroundColor = '#' + event.hexColor;
+    var style = {
+        backgroundColor: backgroundColor,
+        borderRadius: '0px',
+        opacity: 0.8,
+        color: 'black',
+        border: '0px',
+        display: 'block'
+    };
+    return {
+        style: style
+    };
+}
+
   render() {
     console.log(this.state.type);
     return (
