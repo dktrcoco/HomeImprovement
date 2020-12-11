@@ -101,21 +101,21 @@ class MyCalendar extends Component {
   };
 
   // trying to set up different colors for different categories
-  eventStyleGetter = function(event, start, end, isSelected) {
+  eventStyleGetter = function (event, start, end, isSelected) {
     console.log(event);
-    var backgroundColor = '#' + event.hexColor;
+    var backgroundColor = "#" + event.hexColor;
     var style = {
-        backgroundColor: backgroundColor,
-        borderRadius: '0px',
-        opacity: 0.8,
-        color: 'black',
-        border: '0px',
-        display: 'block'
+      backgroundColor: backgroundColor,
+      borderRadius: "0px",
+      opacity: 0.8,
+      color: "black",
+      border: "0px",
+      display: "block",
     };
     return {
-        style: style
+      style: style,
     };
-}
+  };
 
   render() {
     console.log(this.state.type);
@@ -138,7 +138,7 @@ class MyCalendar extends Component {
           startAccessor="start"
           endAccessor="end"
           style={{ height: 500 }}
-        />
+        /> */}
         <Row className="features" style={{ display: "flex" }}>
           <Col>
             <MyIcon src="./assets/img/events.png" link="events" />
@@ -158,7 +158,7 @@ class MyCalendar extends Component {
         </Row>
         {this.state.type === "chores" && (
           <ChoreForm refreshEvents={() => this.getEvents("events")} />
-        )} */}
+        )}
       </div>
     );
   }

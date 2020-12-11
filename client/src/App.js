@@ -9,6 +9,9 @@ import Signup from "./components/Signup";
 // importing navbar component
 import Nav from "./components/Nav";
 
+// importing Home page
+import Home from './components/Home';
+
 // importing the calendar component
 // import MyCalendar from "./components/Calendar";
 
@@ -51,6 +54,7 @@ function App() {
 	return (
 		<Router>
 			<Nav setCurrentPage={setCurrentPage} />
+      
 			<div>
 				<p>TESTING</p>
 				{currentPage}
