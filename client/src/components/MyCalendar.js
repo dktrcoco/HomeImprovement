@@ -61,7 +61,7 @@ const FAKE_DB = {
 function MyCalendar({ type, events, bills, chores, getEvents }) {
   return (
     <div>
-      <Calendar
+      <Calendar className="calendarTop"
         localizer={localizer}
         // events={this.state.events}
         // spread operator here expands the contents of the objects here

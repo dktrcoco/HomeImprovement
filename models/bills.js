@@ -8,8 +8,12 @@ const billSchema = new Schema({
 	end: Date,
 	allDay: { type: Boolean, default: true },
 	resource: String,
+	userID: { type: String, required: true}
 });
 
 const Bill = mongoose.model("Bill", billSchema);
 
 module.exports = Bill;
+
+// want to get from the request the userID of who is making the call
+// if you succeed in getting the user, then you get the info

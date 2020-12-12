@@ -1,5 +1,6 @@
 .description {
     color: #17a2b8;
+    text-align: justify;
 }
 
 .title {
@@ -14,5 +15,9 @@
     text-align: left;
     background-color: white;
     z-index: 1;
-    margin-bottom: 10px;
+    padding-top: 0px;
+  }
+
+  .house {
+    padding-left: 10px;
   }

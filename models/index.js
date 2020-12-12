@@ -5,5 +5,6 @@ module.exports = {
   Chore: require("./chores"),
   Bill: require("./bills"),
   Grocery: require("./groceries"),
-  Event: require("./events")
+  Event: require("./events"),
+  // User: require("./user")
 };
