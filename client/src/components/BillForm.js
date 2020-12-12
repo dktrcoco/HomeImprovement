@@ -8,7 +8,6 @@ import { Row, Col, Container, Card } from "react-bootstrap";
 import ChoreAPI from "../utils/choreAPI";
 import EventAPI from "../utils/eventAPI";
 import "../styles/BillFormStyle.css";
-import BudgetBox from "./BudgetBox";
 
 function BillForm() {
   // Setting Bills component's initial state
