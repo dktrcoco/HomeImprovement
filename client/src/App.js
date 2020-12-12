@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import "./styles/index.css";
 
 // importing components for auth
 import Login from "./components/Login";
