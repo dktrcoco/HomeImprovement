@@ -8,7 +8,7 @@ const billSchema = new Schema({
 	end: Date,
 	allDay: { type: Boolean, default: true },
 	resource: String,
-	// googleId: { type: String, required: true}
+	googleId: { type: String, required: true}
 });
 
 const Bill = mongoose.model("Bill", billSchema);
