@@ -8,7 +8,7 @@ const eventSchema = new Schema({
   allDay: Boolean,
   resource: String,
   event: { type: String, required: true },
-  userID: { type: String, required: true}
+  // userID: { type: String, required: true}
 });
 
 const Event = mongoose.model("Event", eventSchema);
