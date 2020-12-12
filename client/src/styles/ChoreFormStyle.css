@@ -1,3 +1,17 @@
 .submitbtn {
     background-color: #3174AD;  
 }
+
+#infoBox {
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 1%;
+}
+
+#carousel {
+    border: 2px solid #3174AD;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: auto;
+    height: 350px;
+}

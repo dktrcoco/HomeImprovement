@@ -107,7 +107,7 @@ function BillForm() {
       <Calendar events={events} bills={bills} chores={chores}></Calendar>
       <Features />
       <Row>
-        <Col id="billBox">
+        <Col id="infoBox">
           <form action="/api/bills" method="post">
             <h2>Enter a Bill</h2>
             <input
