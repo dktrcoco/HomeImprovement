@@ -21,8 +21,11 @@ function Login(param) {
   const onSuccess = (res) => {
     // event.preventDefault();
     console.log("Login Success: currentUser:", res.profileObj);
+    if (window.location.pathname !== "/home") {
+    } else {
+      window.location.replace("/bills");
+    }
     // onSignin();
-    // window.location.replace("./bills");
     // alert(
     //   <a href="/bills">Click to Enter</a>
     //   // `Logged in successfully welcome ${res.profileObj.name} 😍. \n See console for full profile object.`
@@ -47,10 +50,11 @@ function Login(param) {
   const onSignin = () => {
     // this changes setshowRedirect from false to true if a user
     // correctly logs in
+    // console.log("Gummy bears");
+    // window.location.replace("./bills");
     // setshowRedirect(true);
     // window.location.replace("/bills");
     // window.location.href = "./bills";
-
     // return (
     //   <NavLink className="signinBtn" to="/bills">
     //     Ironman
@@ -58,23 +62,17 @@ function Login(param) {
     // );
   };
 
+  // react google login
   const { signIn } = useGoogleLogin({
     onSuccess,
     onFailure,
-    onSignin,
+    // onSignin,
     clientId,
     isSignedIn: true,
     accessType: "offline",
   });
 
-  function rerouteToApp() {
-    // var signInBtn = document.getElementById("signinButton");
-    // if (signInBtn.style.display === "none") {
-    //   signInBtn.style.display = "block";
-    // } else {
-    //   signInBtn.style.display = "none";
-    // }
-  }
+  function rerouteToApp() {}
 
   // need to save on front end info from google acct on login
   // should use redux for this (state management solutions)
