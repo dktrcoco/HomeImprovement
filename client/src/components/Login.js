@@ -20,7 +20,8 @@ function Login(param) {
 
   const onSuccess = (res) => {
     // event.preventDefault();
-    console.log("Login Success: currentUser:", res.profileObj);
+    document.cookie = "googleId=" + res.profileObj.googleId;
+    console.log("Login Success: currentUser:", res.profileObj.googleId);
     if (window.location.pathname !== "/home") {
     } else {
       window.location.replace("/bills");

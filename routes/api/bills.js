@@ -5,6 +5,7 @@ var db = require("../../models");
 // GET route for getting all bills
 router.route("/")
     .get(function (req, res) {
+        console.log("cookie: " + req.cookies.googleId);
         db.Bill.find({})
             .then(function (dbBill) {
                 res.json(dbBill);
