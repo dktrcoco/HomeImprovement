@@ -10,6 +10,6 @@ router.use("/chores", choreRoutes);
 router.use("/bills", billRoutes);
 router.use("/groceries", groceryRoutes);
 router.use("/events", eventRoutes);
-// router.use("/.user", userRoutes);
+// router.use("/user", userRoutes);
 
 module.exports = router;
