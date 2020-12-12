@@ -6,8 +6,11 @@ import BillAPI from "../utils/billAPI";
 import Features from "../components/Features";
 import Calendar from "../components/MyCalendar";
 import { Link } from "react-router-dom";
-import { Row, Col, Container, Card } from "react-bootstrap";
+import { Row, Col, Container, Card, Carousel } from "react-bootstrap";
 import "../styles/ChoreFormStyle.css";
+import SnowfallVid1 from "../assets/snowfall_vid_1.mp4";
+import SnowfallVid2 from "../assets/snowfall_vid_2.mp4";
+import SnowfallVid3 from "../assets/snowfall_vid_3.mp4";
 
 function ChoreForm() {
   // Setting Chores component's initial state
@@ -78,64 +81,85 @@ function ChoreForm() {
   }
 
   return (
-    <Container>
+    <Container className="headerSpace">
+      <Row>
+        <Col>
+          <Carousel id="carousel" interval={20000}>
+            <Carousel.Item>
+              <video className='d-block w-100' autoPlay loop muted>
+                <source src={SnowfallVid1} type='video/mp4' />
+              </video>
+            </Carousel.Item>
+            <Carousel.Item>
+              <video className='d-block w-100' autoPlay loop muted>
+                <source src={SnowfallVid2} type='video/mp4' />
+              </video>
+            </Carousel.Item>
+            <Carousel.Item>
+              <video className='d-block w-100' autoPlay loop muted>
+                <source src={SnowfallVid3} type='video/mp4' />
+              </video>
+            </Carousel.Item>
+          </Carousel>
+        </Col>
+      </Row>
       <Calendar events={events} bills={bills} chores={chores}></Calendar>
       <Features />
-      <Col>
-        <form action="/api/chores" method="post">
-          <h2>Enter a Chore</h2>
-          <input
-            onChange={handleInputChange}
-            type="text"
-            className="form-control"
-            name="title"
-            placeholder="What chore do you want to add?"
-          />
-          <input
-            onChange={handleInputChange}
-            type="text"
-            className="form-control"
-            name="name"
-            placeholder="Who is responsible for this chore?"
-          />
-          <input
-            onChange={handleInputChange}
-            type="datetime-local"
-            className="form-control"
-            name="start"
-            placeholder="When does this chore need to be completed?"
-          />
-          <button
-            onClick={handleFormSubmit}
-            className="btn btn-lg btn-primary btn-block submitbtn"
-            id="submit"
-            type="submit"
-          >
-            Submit
-          </button>
-        </form>
-      </Col>
-      <Col>
-        <Row>
-          <Col>
-            <h1>Chores On My List</h1>
-            {chores.length ? (
-              <ul>
-                {chores.map((chore) => (
-                  <div key={chore._id}>
-                    <Link to={"/chore/" + chore._id}>
-                      {chore.title} to be done by {chore.name}
-                    </Link>
-                    <DeleteBtn onClick={() => deleteChore(chore._id)} />
-                  </div>
-                ))}
-              </ul>
-            ) : (
+      <Row>
+        <Col id="infoBox">
+          <form action="/api/chores" method="post">
+            <h2>Enter a Chore</h2>
+            <input
+              onChange={handleInputChange}
+              type="text"
+              className="form-control"
+              name="title"
+              placeholder="What chore do you want to add?"
+            />
+            <input
+              onChange={handleInputChange}
+              type="text"
+              className="form-control"
+              name="name"
+              placeholder="Who is responsible for this chore?"
+            />
+            <input
+              onChange={handleInputChange}
+              type="datetime-local"
+              className="form-control"
+              name="start"
+              placeholder="When does this chore need to be completed?"
+            />
+            <button
+              onClick={handleFormSubmit}
+              className="btn btn-lg btn-primary btn-block submitbtn"
+              id="submit"
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <h1>Chores On My List</h1>
+          {chores.length ? (
+            <ul>
+              {chores.map((chore) => (
+                <div key={chore._id}>
+                  <Link to={"/chore/" + chore._id}>
+                    {chore.title} to be done by {chore.name}
+                  </Link>
+                  <DeleteBtn onClick={() => deleteChore(chore._id)} />
+                </div>
+              ))}
+            </ul>
+          ) : (
               <h3>No Results to Display</h3>
             )}
-          </Col>
-        </Row>
-      </Col>
+        </Col>
+      </Row>
     </Container>
   );
 }
