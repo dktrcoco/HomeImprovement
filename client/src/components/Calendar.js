@@ -126,6 +126,10 @@ class MyCalendar extends Component {
           bills={this.state.bills}
           chores={this.state.chores}
           getEvents={this.getEvents}
+          views={[]}
+          onSelectSlot={(this.slotSelected)}
+          onSelectEvent={(this.eventSelected)}
+          eventPropGetter={(this.eventStyleGetter)}
         ></NewCalendar>
         {/* <Calendar
           localizer={localizer}

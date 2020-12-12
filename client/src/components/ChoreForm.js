@@ -37,13 +37,14 @@ function ChoreForm() {
       .catch((err) => console.log(err));
   }
 
+  // load all events and sets them to events
   function loadEvents() {
     EventAPI.getEvents()
       .then((res) => setEvents(res.data))
       .catch((err) => console.log(err));
   }
 
-  // Deletes an chore from the database with a given id,
+  // Deletes a chore from the database with a given id,
   // then reloads chores from the db
   function deleteChore(id) {
     ChoreAPI.deleteChore(id)

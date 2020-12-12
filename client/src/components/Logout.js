@@ -1,4 +1,5 @@
 import React from 'react';
+import "../styles/LogoutStyle.css";
 import { useGoogleLogout } from 'react-google-login';
 
 const clientId =
@@ -21,7 +22,7 @@ function Logout() {
   });
 
   return (
-    <button onClick={signOut} className="button">
+    <button onClick={signOut} id="signoutButton" className="button">
       <img src="./assets/img/google.svg" class="icon" width="18px" height="18px"></img>
 
       <span className="buttonText">Sign out</span>
