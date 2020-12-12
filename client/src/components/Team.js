@@ -13,7 +13,10 @@ function Team() {
   // state would go here
   return (
     <Container className="teamContainer" id="aboutUs">
-      <h1 className="meet">The Dream Team</h1>
+      <Row className="meet">
+        <h1>The Dream Team</h1>
+      </Row>
+
       <Row>
         <Card>
           <Teammate

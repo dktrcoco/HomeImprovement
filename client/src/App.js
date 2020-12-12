@@ -33,6 +33,12 @@ import Footer from "./components/Footer";
 import Button from "./components/NewButton";
 
 function App() {
+
+	// setting up the state of the user
+	// const [user, setUser] = useState();
+	// after you complete the api call to get the googleID
+	// setUser
+
 	// the next 14ish lines are current attempts at incorporating
 	// scrolling functionality
 	const [currentPage, setCurrentPage] = useState();
@@ -65,6 +71,7 @@ function App() {
 				{/* <MyCalendar />
         <Features ref={featureRef} /> */}
 				<Switch>
+					<Route path="/home" component={Home} />
 					<Route exact path="/" component={BillForm} />
 					<Route path="/login" component={Login} />
 					<Route path="/logout" component={Logout} />
@@ -78,7 +85,7 @@ function App() {
 					</Route>
 				</Switch>
 			</div>
-			<Team ref={teamRef} />
+			{/* <Team ref={teamRef} /> */}
 			<Footer />
 		</Router>
 	);
