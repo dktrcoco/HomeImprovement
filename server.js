@@ -1,6 +1,7 @@
 // setup for auth
 const express = require("express");
 const passport = require('passport');
+const cookieParser = require('cookie-parser');
 
 const mongoose = require("mongoose");
 const routes = require("./routes");
@@ -18,6 +19,7 @@ const PORT = process.env.PORT || 3001;
 
 // Define middleware here
 app.use(cors());
+app.use(cookieParser())
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 

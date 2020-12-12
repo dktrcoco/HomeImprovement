@@ -8,7 +8,14 @@ const clientId =
 function Logout() {
   const onLogoutSuccess = (res) => {
     console.log('Logged out Success');
-    alert('Logged out Successfully ✌');
+    // this line is critical, it will remove the cookie used for identification
+    // after a user logs out
+    document.cookie = "googleId=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+    if (window.location.pathname === "/home") {
+    } else {
+      window.location.replace("/home");
+    }
+    // alert('Logged out Successfully ✌');
   };
 
   const onFailure = () => {
