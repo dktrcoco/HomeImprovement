@@ -4,10 +4,13 @@ import BillAPI from "../utils/billAPI";
 import Calendar from "../components/MyCalendar";
 import Features from "../components/Features";
 import { Link } from "react-router-dom";
-import { Row, Col, Container, Card } from "react-bootstrap";
+import { Row, Col, Container, Card, Carousel } from "react-bootstrap";
 import ChoreAPI from "../utils/choreAPI";
 import EventAPI from "../utils/eventAPI";
 import "../styles/BillFormStyle.css";
+import SnowfallVid1 from "../assets/snowfall_vid_1.mp4";
+import SnowfallVid2 from "../assets/snowfall_vid_2.mp4";
+import SnowfallVid3 from "../assets/snowfall_vid_3.mp4";
 
 function BillForm() {
   // Setting Bills component's initial state
@@ -79,62 +82,83 @@ function BillForm() {
   }
 
   return (
-    <Container>
+    <Container className="headerSpace">
+      <Row>
+        <Col>
+          <Carousel id="carousel" interval={20000}>
+            <Carousel.Item>
+              <video className='d-block w-100' autoPlay loop muted>
+                <source src={SnowfallVid1} type='video/mp4' />
+              </video>
+            </Carousel.Item>
+            <Carousel.Item>
+              <video className='d-block w-100' autoPlay loop muted>
+                <source src={SnowfallVid2} type='video/mp4' />
+              </video>
+            </Carousel.Item>
+            <Carousel.Item>
+              <video className='d-block w-100' autoPlay loop muted>
+                <source src={SnowfallVid3} type='video/mp4' />
+              </video>
+            </Carousel.Item>
+          </Carousel>
+        </Col>
+      </Row>
       <Calendar events={events} bills={bills} chores={chores}></Calendar>
       <Features />
-      <Col>
-        <form action="/api/bills" method="post">
-          <h2>Enter a Bill</h2>
-          <input
-            onChange={handleInputChange}
-            type="text"
-            className="form-control"
-            name="title"
-            placeholder="What bill do you want to add?"
-          />
-          <input
-            onChange={handleInputChange}
-            type="value"
-            className="form-control"
-            name="value"
-            placeholder="How much is owed?"
-          />
-          <input
-            onChange={handleInputChange}
-            type="datetime-local"
-            className="form-control"
-            name="start"
-            placeholder="When is this bill due?"
-          />
-          <button
-            onClick={handleFormSubmit}
-            className="btn btn-lg btn-primary btn-block submitbtn"
-            id="submit"
-            type="submit"
-          >
-            Submit
+      <Row>
+        <Col id="billBox">
+          <form action="/api/bills" method="post">
+            <h2>Enter a Bill</h2>
+            <input
+              onChange={handleInputChange}
+              type="text"
+              className="form-control"
+              name="title"
+              placeholder="What bill do you want to add?"
+            />
+            <input
+              onChange={handleInputChange}
+              type="value"
+              className="form-control"
+              name="value"
+              placeholder="How much is owed?"
+            />
+            <input
+              onChange={handleInputChange}
+              type="datetime-local"
+              className="form-control"
+              name="start"
+              placeholder="When is this bill due?"
+            />
+            <button
+              onClick={handleFormSubmit}
+              className="btn btn-lg btn-primary btn-block submitbtn"
+              id="submit"
+              type="submit"
+            >
+              Submit
           </button>
-        </form>
-      </Col>
-      <Col>
-        <Row>
-          <Col>
-            <h1>Bills On My List</h1>
-            {bills.length ? (
-              <ul>
-                {bills.map((bill) => (
-                  <div key={bill._id}>
-                    <Link to={"/bill/" + bill._id}>{bill.title} with ${bill.value} due</Link>
-                    <DeleteBtn onClick={() => deleteBill(bill._id)} />
-                  </div>
-                ))}
-              </ul>
-            ) : (
+          </form>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <h1>Bills On My List</h1>
+          {bills.length ? (
+            <ul>
+              {bills.map((bill) => (
+                <div key={bill._id}>
+                  <Link to={"/bill/" + bill._id}>{bill.title} with ${bill.value} due</Link>
+                  <DeleteBtn onClick={() => deleteBill(bill._id)} />
+                </div>
+              ))}
+            </ul>
+          ) : (
               <h3>No Results to Display</h3>
             )}
-          </Col>
-        </Row>
-      </Col>
+        </Col>
+      </Row>
     </Container>
   );
 }
