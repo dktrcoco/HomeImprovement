@@ -132,8 +132,9 @@ function GroceryForm() {
           </form>
         </Col>
       </Row>
+      <br></br>
       <Row>
-        <Col>
+        <Col id="listBox">
           <h1>Groceries On My List</h1>
           {groceries.length ? (
             <ul>

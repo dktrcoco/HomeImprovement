@@ -142,8 +142,9 @@ function BillForm() {
           </form>
         </Col>
       </Row>
+      <br></br>
       <Row>
-        <Col>
+        <Col id="listBox">
           <h1>Bills On My List</h1>
           {bills.length ? (
             <ul>

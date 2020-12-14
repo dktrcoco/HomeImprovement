@@ -141,8 +141,9 @@ function ChoreForm() {
           </form>
         </Col>
       </Row>
+      <br></br>
       <Row>
-        <Col>
+        <Col id="listBox">
           <h1>Chores On My List</h1>
           {chores.length ? (
             <ul>
