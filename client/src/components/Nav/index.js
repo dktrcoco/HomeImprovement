@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 // import Navbar from "react-bootstrap/Navbar";
 import Logout from "../Logout";
 import Login from "../Login";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 
@@ -22,30 +22,20 @@ const Nav = (props) => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light rounded">
-      <Col className="appName">
-        <a className="navbar-brand text-info font-weight-bolder" href="/">
-          <span className="title">Abode</span>
-        </a>
-      </Col>
+    <Container>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light rounded">
+        <Row>
+          <Col className="appName">
+            <a className="navbar-brand text-info font-weight-bolder" href="/">
+              <span className="title">Abode</span>
+            </a>
+          </Col>
+          <Col>
+            <div id="userPicContainer"></div>
+          </Col>
 
-      <div className="toggler">
-        <button
-          className="custom-toggler navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarsExample09"
-          aria-controls="navbarsExample09"
-          aria-expanded={!isNavCollapsed ? true : false}
-          aria-label="Toggle navigation"
-          onClick={handleNavCollapse}
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-      </div>
-
-      <Row className="rowHouse">
-        <MyIcon
+          {/* <Row className="rowHouse"> */}
+          {/* <MyIcon
           className="house"
           alt="Image of a simple house."
           src="./assets/img/house1.png"
@@ -64,34 +54,47 @@ const Nav = (props) => {
           className="house"
           alt="Image of a mansion."
           src="./assets/img/house4.jpg"
-        />
-        {/* <Col> */}
-        <Logout />
-        <div id="userPicContainer">
-
+        /> */}
+        </Row>
+        <div className="toggler">
+          <button
+            className="custom-toggler navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarsExample09"
+            aria-controls="navbarsExample09"
+            aria-expanded={!isNavCollapsed ? true : false}
+            aria-label="Toggle navigation"
+            onClick={handleNavCollapse}
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
         </div>
-        {/* <Row className="login"> */}
-        <Login />
-        {/* </Row> */}
-        {/* </Col> */}
-      </Row>
-      <Col className="navButton"></Col>
-
-      <div
-        className={`${isNavCollapsed ? "collapse" : ""} navbar-collapse`}
-        id="navbarsExample09"
-      >
-        <Col className="description">
-          <p>
-            Abode simiplifies your life by providing a single location to keep
-            track of all of the important things in your life. Track your bills,
-            important events, chores and tasks to be done, and even a list of
-            groceries you need to buy! Abode instills order to a disordered
-            world.
-          </p>
-        </Col>
-      </div>
-    </nav>
+        <Row>
+          <Col>
+            <Login />
+            <Logout />
+          </Col>
+        </Row>
+        {/* <Col className="navButton"></Col> */}
+        <Row>
+          <div
+            className={`${isNavCollapsed ? "collapse" : ""} navbar-collapse`}
+            id="navbarsExample09"
+          >
+            <Col className="description">
+              <p>
+                Abode simiplifies your life by providing a single location to
+                keep track of all of the important things in your life. Track
+                your bills, important events, chores and tasks to be done, and
+                even a list of groceries you need to buy! Abode instills order
+                to a disordered world.
+              </p>
+            </Col>
+          </div>
+        </Row>
+      </nav>
+    </Container>
   );
 };
 
