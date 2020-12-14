@@ -90,17 +90,17 @@ function EventForm() {
         <Col>
           <Carousel id="carousel" interval={20000}>
             <Carousel.Item>
-              <video className='d-block w-100' autoPlay loop muted>
+              <video className='d-block w-auto' autoPlay loop muted>
                 <source src={SnowfallVid1} type='video/mp4' />
               </video>
             </Carousel.Item>
             <Carousel.Item>
-              <video className='d-block w-100' autoPlay loop muted>
+              <video className='d-block w-auto' autoPlay loop muted>
                 <source src={SnowfallVid2} type='video/mp4' />
               </video>
             </Carousel.Item>
             <Carousel.Item>
-              <video className='d-block w-100' autoPlay loop muted>
+              <video className='d-block w-auto' autoPlay loop muted>
                 <source src={SnowfallVid3} type='video/mp4' />
               </video>
             </Carousel.Item>
