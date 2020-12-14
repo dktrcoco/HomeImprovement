@@ -33,12 +33,14 @@ function BillForm() {
       .catch((err) => console.log(err));
   }
 
+  // Load all chores and sets them to chores
   function loadChores() {
     ChoreAPI.getChores()
       .then((res) => setChores(res.data))
       .catch((err) => console.log(err));
   }
 
+  // Load all events and sets them to events
   function loadEvents() {
     EventAPI.getEvents()
       .then((res) => setEvents(res.data))

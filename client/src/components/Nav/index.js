@@ -1,12 +1,9 @@
 import React, { useState, useRef } from "react";
-import { List, ListItem } from "../List";
-// import { Link } from "react-router-dom";
-import Navbar from "react-bootstrap/Navbar";
+// import Navbar from "react-bootstrap/Navbar";
 import Logout from "../Logout";
 import Login from "../Login";
-import { Row, Col, Container, Card } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import { Container } from "react-bootstrap";
 import "./style.css";
 
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
@@ -71,7 +68,7 @@ const Nav = (props) => {
         {/* <Col> */}
         <Logout />
         <div id="userPicContainer">
-          
+
         </div>
         {/* <Row className="login"> */}
         <Login />
@@ -107,31 +104,6 @@ function MyIcon(props) {
       <img src={props.src} alt="" style={style} />
     </div>
   );
-}
-
-function hideLogoutBtn() {
-  console.log("test");
-  // var loginBtn = document.getElementById("login");
-  // var logoutBtn = document.getElementById("logout");
-  // if (loginBtn.style.display === "none") {
-  //   loginBtn.style.display = "block";
-  //   logoutBtn.style.display = "none";
-  // } else {
-  //   loginBtn.style.display = "none";
-  //   logoutBtn.style.display = "block";
-  // }
-}
-function hideLoginBtn() {
-  console.log("test2");
-  // var logoutBtn = document.getElementById("logout");
-  // var loginBtn = document.getElementById("login");
-  // if (logoutBtn.style.display === "none") {
-  //   logoutBtn.style.display = "block";
-  //   loginBtn.style.display = "none";
-  // } else {
-  //   logoutBtn.style.display = "none";
-  //   loginBtn.style.display = "block";
-  // }
 }
 
 export default Nav;

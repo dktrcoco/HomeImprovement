@@ -40,6 +40,7 @@ function EventForm() {
       .catch((err) => console.log(err));
   }
 
+  // Load all chores and sets them to chores
   function loadChores() {
     ChoreAPI.getChores()
       .then((res) => setChores(res.data))
