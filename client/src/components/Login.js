@@ -22,22 +22,26 @@ function Login(param) {
     // event.preventDefault();
     document.cookie = "googleId=" + res.profileObj.googleId;
     console.log("Login Success: currentUser:", res.profileObj.googleId);
+    console.log(res.profileObj);
+    var loginBtn = document.getElementById("signinButton");
+    var logoutBtn = document.getElementById("logoutButton");
+    var userPicContainer = document.getElementById("userPicContainer");
+    loginBtn.style.display = "none";
+    logoutBtn.style.display = "block";
+    var URLImage = res.profileObj.imageUrl;
+    userPicContainer.innerHTML = "<img src=" + URLImage + "></img>";
+
     if (window.location.pathname !== "/home") {
     } else {
       window.location.replace("/bills");
     }
-    // onSignin();
-    // alert(
-    //   <a href="/bills">Click to Enter</a>
-    //   // `Logged in successfully welcome ${res.profileObj.name} 😍. \n See console for full profile object.`
-    // );
 
-    console.log(user);
+    console.log("URL: " + URLImage);
+
+    console.log(res.profileObj.imageUrl);
     // referring back to app.js
     setUser({ userName: res.profileObj.name });
     console.log(user);
-    // I could send this to the db from here as long as i have
-    // proper api route setup
 
     refreshTokenSetup(res);
     return res.profileObj;
@@ -79,7 +83,7 @@ function Login(param) {
   // should use redux for this (state management solutions)
   return (
     <div>
-      <div>{/* <Button href="/bills">Redirect</Button> */}</div>
+      {/* <div><img src={URLImage} alt="User Image" /> </div> */}
       {/* {showRedirect && <Redirect to="/bills"></Redirect>} */}
       <button onClick={signIn} id="signinButton" className="button">
         <img src="./assets/img/google.svg" width="18px" height="18px"></img>

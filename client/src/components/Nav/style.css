@@ -21,3 +21,15 @@
   .house {
     padding-left: 10px;
   }
+
+  .navButton {
+    float: right;
+  }
+
+  .rowHouse {
+    align-content: center;
+  }
+
+  .appName {
+    width: 50%;
+  }
