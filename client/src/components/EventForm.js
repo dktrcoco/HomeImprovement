@@ -145,8 +145,9 @@ function EventForm() {
           </form>
         </Col>
       </Row>
+      <br></br>
       <Row>
-        <Col>
+        <Col id="listBox">
           <h1>Events On My List</h1>
           {events.length ? (
             <ul>

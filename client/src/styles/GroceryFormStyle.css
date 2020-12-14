@@ -2,10 +2,18 @@
     background-color: #3174AD;  
 }
 
-#billBox {
+#infoBox {
     border: 2px solid black;
     border-radius: 20px;
     padding: 1%;
+    margin: auto;
+}
+
+#listBox {
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 1%;
+    margin: auto;
 }
 
 #carousel {
