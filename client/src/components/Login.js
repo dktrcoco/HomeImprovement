@@ -67,12 +67,33 @@ function Login(param) {
   // need to save on front end info from google acct on login
   // should use redux for this (state management solutions)
   return (
-    <div>
-      <button onClick={signIn} id="signinButton" className="button">
-        <img src="./assets/img/google.svg" width="18px" height="18px"></img>
-        <span className="buttonText">Sign in with Google</span>
+    // <button onClick={signIn} class="google-btn">
+    //   <div class="google-icon-wrapper">
+    //     <img
+    //       class="google-icon"
+    //       src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+    //     />
+    //   </div>
+    //   <p class="btn-text">
+    //     <b>Sign in with google</b>
+    //   </p>
+    // </button>
+    // <div className="googleBtn">
+      <button 
+      onClick={signIn} 
+      id="signinButton" 
+      className="loginButton"
+      >
+        <div className="google-icon-wrapper">
+          <img
+            className="google-icon"
+            src="./assets/img/google.svg"
+          ></img>
+        </div>
+        
+        <span className="btn-text">Sign in with Google</span>
       </button>
-    </div>
+    // </div>
   );
 }
 

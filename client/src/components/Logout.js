@@ -6,7 +6,6 @@ const clientId =
   "111239797672-3lvrii9bgdpun27maknmt1ahrdt0p5tv.apps.googleusercontent.com";
 
 function Logout() {
-
   const onLogoutSuccess = (res) => {
     console.log("Logged out Success");
 
@@ -40,16 +39,16 @@ function Logout() {
       onClick={signOut}
       id="logoutButton"
       style={style}
-      className="button"
+      className="logoutButton"
     >
-      <img
-        src="./assets/img/google.svg"
-        className="icon"
-        width="18px"
-        height="18px"
-      ></img>
+      <div className="google-icon-wrapper">
+        <img
+          src="./assets/img/google.svg"
+          className="google-icon"
+        ></img>
+      </div>
 
-      <span className="buttonText">Sign out</span>
+      <span className="btn-text">Sign out</span>
     </button>
   );
 }
