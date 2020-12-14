@@ -1,6 +1,6 @@
 # Abode
 
-Link of Deployed App: https://home-management-app.herokuapp.com/
+Link of Deployed App: https://home-management-app.herokuapp.com/home
 
 Link to GitHub Repo: https://github.com/dktrcoco/HomeImprovement
 
@@ -65,6 +65,10 @@ You can also reach us through GitHub directly via our accounts (listed above).
 -Add multiple log-ins
 -Add multiple authentication level types
 -SMS messages
+-Implement various carousel videos that change based on the season or other variable (like weather)
+-When a user clicks on an item in their grocery list, several recipes incorporating that item are displayed
+-Integration of your Google calendar to this calendar for easy migration
+-Pull image of user that is logged in from Google object and display it 
 
 ## Retrospective
 

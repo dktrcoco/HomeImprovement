@@ -26,36 +26,60 @@ const Nav = (props) => {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light rounded">
-      <Row>
-        <Col>
-          <a className="navbar-brand text-info font-weight-bolder" href="/">
-            <span className="title">Abode</span>
-          </a>
-        </Col>
+      <Col className="appName">
+        <a className="navbar-brand text-info font-weight-bolder" href="/">
+          <span className="title">Abode</span>
+        </a>
+      </Col>
+
+      <div className="toggler">
+        <button
+          className="custom-toggler navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarsExample09"
+          aria-controls="navbarsExample09"
+          aria-expanded={!isNavCollapsed ? true : false}
+          aria-label="Toggle navigation"
+          onClick={handleNavCollapse}
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <Row className="rowHouse">
+        <MyIcon
+          className="house"
+          alt="Image of a simple house."
+          src="./assets/img/house1.png"
+        />
+        <MyIcon
+          className="house"
+          alt="Image of a beach house."
+          src="./assets/img/house2.png"
+        />
+        <MyIcon
+          className="house"
+          alt="Image of an animated house."
+          src="./assets/img/house3.png"
+        />
+        <MyIcon
+          className="house"
+          alt="Image of a mansion."
+          src="./assets/img/house4.jpg"
+        />
         {/* <Col> */}
-          <Logout />
-          <Login />
+        <Logout />
+        <div id="userPicContainer">
+          
+        </div>
+        {/* <Row className="login"> */}
+        <Login />
+        {/* </Row> */}
         {/* </Col> */}
-        <Col></Col>
-        <MyIcon className="house" src="./assets/img/house1.png"/>
-        <MyIcon className="house" src="./assets/img/house2.png"/>
-        <MyIcon className="house" src="./assets/img/house3.png"/>
-        <MyIcon className="house" src="./assets/img/house4.jpg"/>
-        <Col>
-          <button
-            className="custom-toggler navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarsExample09"
-            aria-controls="navbarsExample09"
-            aria-expanded={!isNavCollapsed ? true : false}
-            aria-label="Toggle navigation"
-            onClick={handleNavCollapse}
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-        </Col>
       </Row>
+      <Col className="navButton"></Col>
+
       <div
         className={`${isNavCollapsed ? "collapse" : ""} navbar-collapse`}
         id="navbarsExample09"
@@ -83,6 +107,31 @@ function MyIcon(props) {
       <img src={props.src} alt="" style={style} />
     </div>
   );
+}
+
+function hideLogoutBtn() {
+  console.log("test");
+  // var loginBtn = document.getElementById("login");
+  // var logoutBtn = document.getElementById("logout");
+  // if (loginBtn.style.display === "none") {
+  //   loginBtn.style.display = "block";
+  //   logoutBtn.style.display = "none";
+  // } else {
+  //   loginBtn.style.display = "none";
+  //   logoutBtn.style.display = "block";
+  // }
+}
+function hideLoginBtn() {
+  console.log("test2");
+  // var logoutBtn = document.getElementById("logout");
+  // var loginBtn = document.getElementById("login");
+  // if (logoutBtn.style.display === "none") {
+  //   logoutBtn.style.display = "block";
+  //   loginBtn.style.display = "none";
+  // } else {
+  //   logoutBtn.style.display = "none";
+  //   loginBtn.style.display = "block";
+  // }
 }
 
 export default Nav;
