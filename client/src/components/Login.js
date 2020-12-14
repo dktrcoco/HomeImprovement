@@ -19,26 +19,29 @@ function Login(param) {
   const [user, setUser] = useState({});
 
   const onSuccess = (res) => {
-    // event.preventDefault();
+    // this line is critical, it will allow access to the unique googleId
+    // of the login user in order to track
     document.cookie = "googleId=" + res.profileObj.googleId;
     console.log("Login Success: currentUser:", res.profileObj.googleId);
     console.log(res.profileObj);
+
+    // setting style so sign in/sign out buttons are only available when they should be used
     var loginBtn = document.getElementById("signinButton");
     var logoutBtn = document.getElementById("logoutButton");
-    var userPicContainer = document.getElementById("userPicContainer");
     loginBtn.style.display = "none";
     logoutBtn.style.display = "block";
+
+    // setting pic of user that is logged in to display
+    var userPicContainer = document.getElementById("userPicContainer");
     var URLImage = res.profileObj.imageUrl;
     userPicContainer.innerHTML = "<img src=" + URLImage + "></img>";
 
+    // code for rerouting after signing in
     if (window.location.pathname !== "/home") {
     } else {
       window.location.replace("/bills");
     }
 
-    console.log("URL: " + URLImage);
-
-    console.log(res.profileObj.imageUrl);
     // referring back to app.js
     setUser({ userName: res.profileObj.name });
     console.log(user);
@@ -52,39 +55,19 @@ function Login(param) {
     alert(`Failed to login. 😢 Please try again`);
   };
 
-  const onSignin = () => {
-    // this changes setshowRedirect from false to true if a user
-    // correctly logs in
-    // console.log("Gummy bears");
-    // window.location.replace("./bills");
-    // setshowRedirect(true);
-    // window.location.replace("/bills");
-    // window.location.href = "./bills";
-    // return (
-    //   <NavLink className="signinBtn" to="/bills">
-    //     Ironman
-    //   </NavLink>
-    // );
-  };
-
   // react google login
   const { signIn } = useGoogleLogin({
     onSuccess,
     onFailure,
-    // onSignin,
     clientId,
     isSignedIn: true,
     accessType: "offline",
   });
 
-  function rerouteToApp() {}
-
   // need to save on front end info from google acct on login
   // should use redux for this (state management solutions)
   return (
     <div>
-      {/* <div><img src={URLImage} alt="User Image" /> </div> */}
-      {/* {showRedirect && <Redirect to="/bills"></Redirect>} */}
       <button onClick={signIn} id="signinButton" className="button">
         <img src="./assets/img/google.svg" width="18px" height="18px"></img>
         <span className="buttonText">Sign in with Google</span>

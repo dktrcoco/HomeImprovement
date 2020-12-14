@@ -7,7 +7,7 @@ import EventAPI from "../utils/eventAPI";
 import Calendar from "../components/MyCalendar";
 import Features from "../components/Features";
 import { Link } from "react-router-dom";
-import { Row, Col, Container, Card, Carousel } from "react-bootstrap";
+import { Row, Col, Container, Carousel } from "react-bootstrap";
 import "../styles/GroceryFormStyle.css";
 import SnowfallVid1 from "../assets/snowfall_vid_1.mp4";
 import SnowfallVid2 from "../assets/snowfall_vid_2.mp4";
@@ -43,12 +43,14 @@ function GroceryForm() {
       .catch((err) => console.log(err));
   }
 
+  // Load all chores and sets them to chores
   function loadChores() {
     ChoreAPI.getChores()
       .then((res) => setChores(res.data))
       .catch((err) => console.log(err));
   }
 
+  // Load all events and sets them to events
   function loadEvents() {
     EventAPI.getEvents()
       .then((res) => setEvents(res.data))

@@ -1,16 +1,10 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Row, Col, Container, Card, Button } from "react-bootstrap";
-import GitHubBtn from "./GitHubBtn";
-import LinkedInBtn from "./LinkedInBtn";
+import { Row, Container, Card } from "react-bootstrap";
 import Teammate from "./Teammate";
-import Quote from "./Quote";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/TeamStyle.css";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Team() {
-  // state would go here
   return (
     <Container className="teamContainer" id="aboutUs">
       <Row className="meet">
