@@ -47,7 +47,7 @@
 
 .imageColor1 {
   border: 1px solid white;
-  background-color:  rgba(255, 255, 255, 0.466);
+  background-color:  rgba(255, 255, 255, 0.75);
   border-radius: 15px;
   float: left;
   padding: 2px;
@@ -55,7 +55,7 @@
 
 .imageColor2 {
   border: 1px solid white;
-  background-color:  rgba(255, 255, 255, 0.466);
+  background-color:  rgba(255, 255, 255, 0.75);
   border-radius: 5px;
   float: left;
   padding: 2px;
@@ -63,7 +63,7 @@
 
 .imageColor3 {
   border: 1px solid white;
-  background-color:  rgba(255, 255, 255, 0.466);
+  background-color:  rgba(255, 255, 255, 0.75);
   border-radius: 15px;
   float: left;
   padding: 2px;
@@ -71,7 +71,7 @@
 
 .imageColor4 {
   border: 1px solid white;
-  background-color:  rgba(255, 255, 255, 0.466);
+  background-color:  rgba(255, 255, 255, 0.75);
   border-radius: 5px;
   float: left;
   padding: 2px;

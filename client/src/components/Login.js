@@ -34,7 +34,7 @@ function Login(param) {
     // setting pic of user that is logged in to display
     var userPicContainer = document.getElementById("userPicContainer");
     var URLImage = res.profileObj.imageUrl;
-    userPicContainer.innerHTML = "<img src=" + URLImage + "></img>";
+    userPicContainer.innerHTML = "<img class='pic' src=" + URLImage + "></img>";
 
     // code for rerouting after signing in
     if (window.location.pathname !== "/home") {
