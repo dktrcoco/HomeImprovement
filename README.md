@@ -26,21 +26,21 @@ SO I can quickly and easly find and maintain that information and get reminders 
 ## Images
 
 Fig. 1: Calendar Display
-![Calendar_Display](./public/assets/img/calendar.PNG)
+![Calendar_Display](./assets/img/calendar.PNG)
 
 Fig. 2: Bill Input with List of Existing Bills
-![Bill_Input](./public/assets/img/billInput.PNG)
+![Bill_Input](./assets/img/billInput.PNG)
 
 ## Gifs
 
-Gif 1: Bill Data Input
-![Bill_Data_Input](./public/assets/gif/calendarBillEntry.gif)
+Gif 1: Bill Data Input and Deletion
+![Bill_Data_Input](./assets/gif/calendarBillEntry.gif)
 
 Gif 2: Cycling between Input Options
-![Input_Cycling](./public/assets/gif/cycling.gif)
+![Input_Cycling](./assets/gif/cycling.gif)
 
 Gif 3: Logging In/Logging Out
-![Logging](./public/assets/gif/logging.gif)
+![Logging](./assets/gif/logging.gif)
 
 ## Install
 
