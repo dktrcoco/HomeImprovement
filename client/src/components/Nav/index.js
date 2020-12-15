@@ -31,7 +31,7 @@ const Nav = (props) => {
             </a>
           </Col>
           <Col>
-            <div id="userPicContainer"></div>
+            <div className="test" id="userPicContainer"></div>
           </Col>
 
           {/* <Row className="rowHouse"> */}
