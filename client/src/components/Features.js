@@ -2,8 +2,8 @@ import React from "react";
 
 function Features() {
   return (
-    <div id="options">
-      <h3>Select From these Features</h3>
+    <div className="container3">
+      <h4 id="options">Click on an Icon above to create a new entry.</h4>
     </div>
   );
 }
