@@ -1,24 +1,21 @@
 .login {
-	align-self: center;
+  align-self: center;
 }
 
 .container1 {
-	margin-top: 170px;
+  margin-top: 170px;
 }
 
 .home-text {
-	border: 1px solid white;
-	border-radius: 25px;
-	background-color:  rgba(255, 255, 255, 0.75);
-	color: black;
-	font-family: "Raleway", sans-serif;
-	/* display: flex; */
-	/* justify-content: center;
-    align-items: center; */
-	margin: 0 auto;
-	padding: 20px;
+  border: 1px solid white;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.75);
+  color: black;
+  font-family: "Raleway", sans-serif;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .team {
-	align-self: center;
+  align-self: center;
 }

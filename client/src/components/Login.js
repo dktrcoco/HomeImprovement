@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { useGoogleLogin } from "react-google-login";
-import { Redirect, useHistory } from "react-router-dom";
-import Button from "./NewButton";
 import "../styles/LoginStyle.css";
-import { BrowserRouter, Route, Link, NavLink } from "react-router-dom";
 
 // refresh token
 import { refreshTokenSetup } from "../utils/refreshToken";
@@ -12,10 +9,6 @@ const clientId =
   "111239797672-3lvrii9bgdpun27maknmt1ahrdt0p5tv.apps.googleusercontent.com";
 
 function Login(param) {
-  // state for redirecting to app
-  const [showRedirect, setshowRedirect] = useState(false);
-
-  //
   const [user, setUser] = useState({});
 
   const onSuccess = (res) => {
@@ -64,36 +57,14 @@ function Login(param) {
     accessType: "offline",
   });
 
-  // need to save on front end info from google acct on login
-  // should use redux for this (state management solutions)
   return (
-    // <button onClick={signIn} class="google-btn">
-    //   <div class="google-icon-wrapper">
-    //     <img
-    //       class="google-icon"
-    //       src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-    //     />
-    //   </div>
-    //   <p class="btn-text">
-    //     <b>Sign in with google</b>
-    //   </p>
-    // </button>
-    // <div className="googleBtn">
-      <button 
-      onClick={signIn} 
-      id="signinButton" 
-      className="loginButton"
-      >
-        <div className="google-icon-wrapper">
-          <img
-            className="google-icon"
-            src="./assets/img/google.svg"
-          ></img>
-        </div>
-        
-        <span className="btn-text">Sign in with Google</span>
-      </button>
-    // </div>
+    <button onClick={signIn} id="signinButton" className="loginButton">
+      <div className="google-icon-wrapper">
+        <img className="google-icon" src="./assets/img/google.svg"></img>
+      </div>
+
+      <span className="btn-text">Sign in with Google</span>
+    </button>
   );
 }
 

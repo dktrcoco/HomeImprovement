@@ -8,9 +8,6 @@ function NewButton({ href, img }) {
         <>
             <a className="new-btn" href={href}><img width="98" height="112" src={img}></img></a>
         </>
-        // <span className="github-btn" href={href} role="button">
-        //         ✗ Button
-        // </span>
     );
 }
 

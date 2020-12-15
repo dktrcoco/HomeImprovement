@@ -1,6 +1,5 @@
 import axios from "axios";
 
-// need to have our equivalent to this for our stuff
 // this file makes it so the UI team does not have to know
 // explicitly the api routes
 export default {
@@ -21,5 +20,3 @@ export default {
     return axios.post("/api/chores", choreData);
   }
 };
-
-// this file should be imported into the chore page in page folder

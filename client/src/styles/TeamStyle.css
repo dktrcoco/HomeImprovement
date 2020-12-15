@@ -1,24 +1,20 @@
 .teamContainer {
-	margin-top: 60px;
-	width: 100%;
-	padding-left: 60px;
-	padding-bottom: 0.5%;
+  margin-top: 60px;
+  width: 100%;
+  padding-left: 60px;
+  padding-bottom: 0.5%;
 }
 
 .meet {
-	text-align: center;
-	color: black;
-	text-decoration: underline;
-	border: 1px solid white;
-	border-radius: 25px;
-	background-color:  rgba(255, 255, 255, 0.75);
+  text-align: center;
+  color: black;
+  text-decoration: underline;
+  border: 1px solid white;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
 .cardMargin {
-	margin-right: 10px;
-	margin-left: 20px;
+  margin-right: 10px;
+  margin-left: 20px;
 }
-
-/* .noBackground {
-	background-color: transparent important!;
-} */

@@ -1,5 +1,5 @@
-import React, { useRef, useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./styles/index.css";
 
 // importing components for auth
@@ -11,9 +11,6 @@ import Nav from "./components/Nav";
 
 // importing Home page
 import Home from "./components/Home";
-
-// importing the calendar component
-// import MyCalendar from "./components/Calendar";
 
 // importing the forms of what we're tracking
 import EventForm from "./components/EventForm";
@@ -28,34 +25,12 @@ import NoMatch from "./pages/NoMatch";
 import Footer from "./components/Footer";
 
 function App() {
-  // setting up the state of the user
-  // const [user, setUser] = useState();
-  // after you complete the api call to get the googleID
-  // setUser
-
-  // the next 14ish lines are current attempts at incorporating
-  // scrolling functionality
-  const [currentPage, setCurrentPage] = useState();
-  const featureRef = useRef(null);
-  const teamRef = useRef(null);
-
-  // this will fire anytime the currentPage changes
-  // only fires the first time the page loads
-  useEffect(() => {
-    if (currentPage === "features" && featureRef.current) {
-      featureRef.current.scrollIntoView();
-    } else if (currentPage === "team" && teamRef.current) {
-      teamRef.current.scrollIntoView();
-    }
-  }, [currentPage]);
-
   return (
     <Router>
-      <Nav setCurrentPage={setCurrentPage} />
+      <Nav />
 
       <div>
-        <p>TESTING</p>
-        {currentPage}
+        <p>If you can find this Easter Egg, you Rock!</p>
       </div>
       <div>
         <Switch>

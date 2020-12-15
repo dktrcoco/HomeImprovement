@@ -4,7 +4,7 @@ import BillAPI from "../utils/billAPI";
 import Calendar from "../components/MyCalendar";
 import Features from "../components/Features";
 import { Link } from "react-router-dom";
-import { Row, Col, Container, Card, Carousel } from "react-bootstrap";
+import { Row, Col, Container, Carousel } from "react-bootstrap";
 import ChoreAPI from "../utils/choreAPI";
 import EventAPI from "../utils/eventAPI";
 import "../styles/BillFormStyle.css";

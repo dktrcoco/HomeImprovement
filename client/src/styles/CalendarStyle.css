@@ -8,7 +8,6 @@
 }
 
 .features {
-  /*border: 2px solid red;*/
   border-radius: 25px;
   display: flex;
   width: auto;
@@ -18,11 +17,10 @@
   background-color: #531d04;
 }
 
-
 .eventText {
-    font-size: 15px;
+  font-size: 15px;
 }
-  
+
 .iconEvents .eventText {
   visibility: hidden;
   width: 120px;
@@ -34,7 +32,7 @@
   position: absolute;
   z-index: 1;
 }
-  
+
 .iconEvents:hover .eventText {
   visibility: visible;
 }
@@ -47,7 +45,7 @@
 
 .imageColor1 {
   border: 1px solid white;
-  background-color:  rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.75);
   border-radius: 15px;
   float: left;
   padding: 2px;
@@ -55,7 +53,7 @@
 
 .imageColor2 {
   border: 1px solid white;
-  background-color:  rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.75);
   border-radius: 5px;
   float: left;
   padding: 2px;
@@ -63,7 +61,7 @@
 
 .imageColor3 {
   border: 1px solid white;
-  background-color:  rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.75);
   border-radius: 15px;
   float: left;
   padding: 2px;
@@ -71,7 +69,7 @@
 
 .imageColor4 {
   border: 1px solid white;
-  background-color:  rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.75);
   border-radius: 5px;
   float: left;
   padding: 2px;
