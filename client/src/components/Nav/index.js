@@ -78,20 +78,17 @@ const Nav = (props) => {
         </Row>
         {/* <Col className="navButton"></Col> */}
         <Row>
-          <div
-            className={`${isNavCollapsed ? "collapse" : ""} navbar-collapse`}
-            id="navbarsExample09"
-          >
-            <Col className="description">
-              <p>
-                Abode simiplifies your life by providing a single location to
-                keep track of all of the important things in your life. Track
-                your bills, important events, chores and tasks to be done, and
-                even a list of groceries you need to buy! Abode instills order
-                to a disordered world.
-              </p>
-            </Col>
-          </div>
+          <Col>
+            <div className={`${isNavCollapsed ? "collapse" : ""} navbar-collapse`} id="navbarsExample09">
+              <div className="description">
+                <p>
+                  Abode simiplifies your life by providing a single location to keep track of all of the important things in your life.
+                  Track your bills, important events, chores and tasks to be done, and even a list of groceries you need to buy!
+                  Abode instills order to a disordered world.
+                </p>
+              </div>
+            </div>
+          </Col>
         </Row>
       </nav>
     </Container>

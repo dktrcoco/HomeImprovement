@@ -3,15 +3,17 @@
 }
 
 .calendarTop {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .features {
-    align-items: center;
-    width: auto;
-    padding-left: 10px;
-    padding-right: 0px;
+  /*border: 2px solid red;*/
+  border-radius: 25px;
+  display: flex;
+  width: auto;
+  align-items: center;
 }
+
 
 .eventText {
     font-size: 15px;
@@ -24,7 +26,7 @@
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 5px 0;
+    padding: 5px;
   
     position: absolute;
     z-index: 1;
@@ -32,4 +34,17 @@
   
   .iconEvents:hover .eventText {
     visibility: visible;
+  }
+
+  #options {
+    border: 2px solid black;
+    border-radius: 25px;
+    text-align: center;
+    max-width: 475px;
+    margin: auto;
+  }
+  .container3 {
+    padding-top: 10px;
+    padding-bottom: 25px;
+    margin: auto;
   }

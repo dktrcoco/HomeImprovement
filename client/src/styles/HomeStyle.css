@@ -1,11 +1,23 @@
 .login {
-    align-self: center;
+	align-self: center;
 }
 
 .test {
-    border-top: 200px;
+	margin-top: 200px;
+}
+
+.home-text {
+	border: 1px solid white;
+	background-color: #531d04;
+	color: white;
+	font-family: "Raleway", sans-serif;
+	/* display: flex; */
+	/* justify-content: center;
+    align-items: center; */
+	margin: 0 auto;
+	padding: 20px;
 }
 
 .team {
-    align-self: center;
+	align-self: center;
 }

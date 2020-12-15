@@ -1,26 +1,36 @@
 .submitbtn {
-    background-color: #3174AD;  
+	background-color: #3174ad;
 }
+/* 
+.boxColor {
+	background-color: #ae3c12;
+} */
 
 #infoBox {
-    border: 2px solid black;
-    border-radius: 25px;
-    padding: 10px;
-    margin: auto;
+	border: 2px solid black;
+	border-radius: 25px;
+	padding: 10px;
+	margin: auto;
 }
 
 #listBox {
-    border: 2px solid black;
-    border-radius: 25px;
-    padding: 10px;
-    margin: auto;
+	border: 2px solid black;
+	border-radius: 25px;
+	padding: 10px;
+	margin: auto;
 }
 
 #carousel {
-    border: 2px solid #3174AD;
-    border-radius: 25px;
-    overflow: hidden;
-    margin: auto;
-    height: 350px;
-    max-width: 1000px;
+	border: 2px solid #3174ad;
+	border-radius: 25px;
+	overflow: hidden;
+	margin: auto;
+	height: 350px;
+	max-width: 1000px;
+}
+
+@media only screen and (max-width: 460px) {
+    #carousel {
+        height: 200px;
+    }
 }
