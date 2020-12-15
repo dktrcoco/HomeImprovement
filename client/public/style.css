@@ -1,0 +1,6 @@
+#root {
+	background-image: url("./assets/img/home.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	/* height: 100vh; */
+}
