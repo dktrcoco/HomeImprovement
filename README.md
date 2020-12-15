@@ -23,6 +23,40 @@ AS a Homeowner, I want one location where I can track my household bills, chores
 
 SO I can quickly and easly find and maintain that information and get reminders when certain things need to be completed.
 
+GIVEN a User who wants one location to track Bills, Events, Chores, and Groceries
+
+WHEN a User navigates to ABODE
+
+THEN they land on the home page, which contains a description of the app and how it works
+
+WHEN a User logs in using their Google Account
+
+THEN they are rerouted to the primary components of the App
+
+WHEN a User is logged in via their Google Account
+
+THEN the image associated with their account will display in the Nav Bar
+
+WHEN a User is logged in
+
+THEN they are given access to the calendar display and input fields for Events, Chores, Bills, and Groceries
+
+WHEN a User inputs data
+
+THEN it will immediately display in a list below and on the calendar above on the appropriate day
+
+WHEN a User wants to switch to a different input and they click on one of the other options
+
+THEN the corresponding input fields will render along with the list of any existing items from that field
+
+WHEN a User wants a reminder of the App description
+
+THEN that information is viewable in the collapsible Nav Bar
+
+WHEN a User is done and wants to log out
+
+THEN they click on the sign out button and they are rerouted to the Home page
+
 ## Images
 
 Fig. 1: Calendar Display
@@ -75,15 +109,17 @@ You can also reach us through GitHub directly via our accounts (listed above).
 -assign chores to specific users (dad cleans garage, kid feeds Fido)
 -Mark off if a chore has been completed
 -‘Gamification’ of chores
+-Color code Events, Chores, Bills differently
 -Color code chores by category
 -Include api calls for weather to influence recommendations for outdoor chores
 -Add multiple log-ins
 -Add multiple authentication level types
 -SMS messages
+-Allow for integration of existing Google Calendars
 -Implement various carousel videos that change based on the season or other variable (like weather)
 -When a user clicks on an item in their grocery list, several recipes incorporating that item are displayed
 -Integration of your Google calendar to this calendar for easy migration
--Pull image of user that is logged in from Google object and display it 
+-Include api call when you click on a grocery item and a list of several recipes that include that item will display
 
 ## Retrospective
 

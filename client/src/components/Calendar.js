@@ -103,7 +103,7 @@ class MyCalendar extends Component {
 	// trying to set up different colors for different categories
 	eventStyleGetter = function (event, start, end, isSelected) {
 		console.log(event);
-		var backgroundColor = "#" + event.hexColor;
+		var backgroundColor = "#" + event.backgroundColor;
 		var style = {
 			backgroundColor: backgroundColor,
 			borderRadius: "0px",
@@ -122,6 +122,7 @@ class MyCalendar extends Component {
 		return (
 			<div>
 				<NewCalendar
+					// className="abc"
 					events={this.state.events}
 					bills={this.state.bills}
 					chores={this.state.chores}
