@@ -1,39 +1,41 @@
 .description {
-    color: #17a2b8;
-    text-align: justify;
+  color: #17a2b8;
+  text-align: justify;
+  max-width: 500px;
+  padding: 10px;
 }
 
 .title {
-    font-size: xx-large;
+  font-size: xx-large;
 }
 
 .navbar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    text-align: left;
-    background-color: white;
-    z-index: 1;
-    padding-top: 0px;
-  }
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: left;
+  background-color: white;
+  z-index: 1;
+  padding-top: 0px;
+}
 
-  .house {
-    padding-left: 10px;
-  }
+.house {
+  padding-left: 10px;
+}
 
-  .navButton {
-    float: right;
-  }
+.navButton {
+  float: right;
+}
 
-  .rowHouse {
-    align-content: center;
-  }
+.rowHouse {
+  align-content: center;
+}
 
-  .appName {
-    width: 50%;
-  }
+.appName {
+  width: 50%;
+}
 
-  /* .toggler {
-    position: relative;
-  } */
+/* .toggler {
+  position: relative;
+} */  
