@@ -7,9 +7,11 @@
 
 .meet {
 	text-align: center;
-	color: white;
-	/* width: 100%;
-	background: rgba(174, 60, 18, 0.6); */
+	color: black;
+	text-decoration: underline;
+	border: 1px solid white;
+	border-radius: 25px;
+	background-color:  rgba(255, 255, 255, 0.466);
 }
 
 .cardMargin {

@@ -135,7 +135,7 @@ function BillForm() {
             />
             <button
               onClick={handleFormSubmit}
-              className="btn btn-lg btn-primary btn-block submitbtn"
+              className="btn btn-lg btn-outline-dark btn-block submitbtn"
               id="submit"
               type="submit"
             >
@@ -147,7 +147,7 @@ function BillForm() {
       <br></br>
       <Row>
         <Col id="listBox">
-          <h1>Bills On My List</h1>
+          <h2>Bills On My List</h2>
           {bills.length ? (
             <ul>
               {bills.map((bill) => (

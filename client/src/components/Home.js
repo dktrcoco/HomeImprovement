@@ -8,20 +8,11 @@ import "../styles/HomeStyle.css";
 
 function Home() {
 	return (
-		<Container className="test">
+		<Container className="container1">
 			<div className="home-text">
-				<h2 style={{ textAlign: "center", marginBottom: "40px" }}>
+				<h1 style={{ textAlign: "center", marginBottom: "40px" }}>
 					Abode is designed to help you take control of your life.
-				</h2>
-				<div
-					style={{
-						textAlign: "center",
-						marginBottom: "10px",
-						fontWeight: "bold",
-					}}
-				>
-					Simply sign in with your Google Account and you're ready to go!
-				</div>
+				</h1>
 				<ul>
 					<li>
 						Track important events like Dinner Parties, Birthdays, and Doctor's
@@ -37,6 +28,16 @@ function Home() {
 						it right here!
 					</li>
 				</ul>
+				<div
+					style={{
+						textAlign: "center",
+						marginBottom: "10px",
+						fontWeight: "bold",
+						textDecoration: "underline"
+					}}
+				>
+					Simply sign in with your Google Account and experience Abode!!
+				</div>
 			</div>
 
 			<Row>

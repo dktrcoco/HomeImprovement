@@ -1,24 +1,30 @@
-.submitbtn {
-    background-color: #3174AD;  
+h2 {
+	text-decoration: underline;
+    text-align: center;
+    font-size: 42px;
+	padding-bottom: 5px;
 }
 
 #infoBox {
-    border: 2px solid black;
+    border: 1px solid white;
     border-radius: 25px;
     padding: 10px;
     margin: auto;
+    /* background-color:  rgba(165, 100, 53, 0.75); */
+    background-color:  rgba(255, 255, 255, 0.466);
 }
 
 #listBox {
-    border: 2px solid black;
+    border: 1px solid white;
     border-radius: 25px;
     padding: 10px;
     margin: auto;
-    background-color: rgba(133, 94, 66, 0.75);
+    /* background-color:  rgba(165, 100, 53, 0.75); */
+    background-color:  rgba(255, 255, 255, 0.466);
 }
 
 #carousel {
-    border: 2px solid #3174AD;
+    /* border: 2px solid #3174AD; */
     border-radius: 25px;
     overflow: hidden;
     margin: auto;

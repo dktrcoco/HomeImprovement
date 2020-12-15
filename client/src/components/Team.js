@@ -8,7 +8,7 @@ function Team() {
 	return (
 		<Container className="teamContainer" id="aboutUs">
 			<div className="meet">
-				<h1 style={{ textAlign: "center", marginLeft: 26 }}>The Dream Team</h1>
+				<h1 style={{ textAlign: "center" }}>The Dream Team</h1>
 			</div>
 
 			<Row>

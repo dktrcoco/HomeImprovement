@@ -4,6 +4,7 @@
 
 .calendarTop {
   margin-top: 50px;
+  background-color: white;
 }
 
 .features {
@@ -11,7 +12,6 @@
   border-radius: 25px;
   display: flex;
   width: auto;
-  align-items: center;
 }
 
 .abc {
@@ -21,34 +21,58 @@
 
 .eventText {
     font-size: 15px;
-  }
+}
   
-  .iconEvents .eventText {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
+.iconEvents .eventText {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+}
   
-    position: absolute;
-    z-index: 1;
-  }
-  
-  .iconEvents:hover .eventText {
-    visibility: visible;
-  }
+.iconEvents:hover .eventText {
+  visibility: visible;
+}
 
-  #options {
-    border: 2px solid black;
-    border-radius: 25px;
-    text-align: center;
-    max-width: 475px;
-    margin: auto;
-  }
-  .container3 {
-    padding-top: 10px;
-    padding-bottom: 25px;
-    margin: auto;
-  }
+.container3 {
+  padding-top: 10px;
+  padding-bottom: 25px;
+  margin: auto;
+}
+
+.imageColor1 {
+  border: 1px solid white;
+  background-color:  rgba(255, 255, 255, 0.466);
+  border-radius: 15px;
+  float: left;
+  padding: 2px;
+}
+
+.imageColor2 {
+  border: 1px solid white;
+  background-color:  rgba(255, 255, 255, 0.466);
+  border-radius: 5px;
+  float: left;
+  padding: 2px;
+}
+
+.imageColor3 {
+  border: 1px solid white;
+  background-color:  rgba(255, 255, 255, 0.466);
+  border-radius: 15px;
+  float: left;
+  padding: 2px;
+}
+
+.imageColor4 {
+  border: 1px solid white;
+  background-color:  rgba(255, 255, 255, 0.466);
+  border-radius: 5px;
+  float: left;
+  padding: 2px;
+}
