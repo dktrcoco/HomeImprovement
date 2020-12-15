@@ -67,7 +67,7 @@ function ChoreForm() {
   // Then reloads chores from the database
   function handleFormSubmit(event) {
     event.preventDefault();
-    console.log(formObject);
+
     if (formObject.title && formObject.name && formObject.start) {
       ChoreAPI.saveChore({
         title: formObject.title,
@@ -86,18 +86,18 @@ function ChoreForm() {
         <Col>
           <Carousel id="carousel" interval={20000}>
             <Carousel.Item>
-              <video className='d-block w-auto' autoPlay loop muted>
-                <source src={SnowfallVid1} type='video/mp4' />
+              <video className="d-block w-auto" autoPlay loop muted>
+                <source src={SnowfallVid1} type="video/mp4" />
               </video>
             </Carousel.Item>
             <Carousel.Item>
-              <video className='d-block w-auto' autoPlay loop muted>
-                <source src={SnowfallVid2} type='video/mp4' />
+              <video className="d-block w-auto" autoPlay loop muted>
+                <source src={SnowfallVid2} type="video/mp4" />
               </video>
             </Carousel.Item>
             <Carousel.Item>
-              <video className='d-block w-auto' autoPlay loop muted>
-                <source src={SnowfallVid3} type='video/mp4' />
+              <video className="d-block w-auto" autoPlay loop muted>
+                <source src={SnowfallVid3} type="video/mp4" />
               </video>
             </Carousel.Item>
           </Carousel>
@@ -157,8 +157,8 @@ function ChoreForm() {
               ))}
             </ul>
           ) : (
-              <h3>No Results to Display</h3>
-            )}
+            <h3>No Results to Display</h3>
+          )}
         </Col>
       </Row>
     </Container>

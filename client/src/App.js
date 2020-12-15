@@ -26,7 +26,6 @@ import NoMatch from "./pages/NoMatch";
 
 // importing component for footer
 import Footer from "./components/Footer";
-import Button from "./components/NewButton";
 
 function App() {
   // setting up the state of the user
@@ -45,10 +44,8 @@ function App() {
   useEffect(() => {
     if (currentPage === "features" && featureRef.current) {
       featureRef.current.scrollIntoView();
-      console.log("aarhg");
     } else if (currentPage === "team" && teamRef.current) {
       teamRef.current.scrollIntoView();
-      console.log("1234");
     }
   }, [currentPage]);
 
@@ -61,10 +58,6 @@ function App() {
         {currentPage}
       </div>
       <div>
-        {/* the calendar component is no longer needed here
-        because it is imbedded in each of the form files */}
-        {/* <MyCalendar />
-        <Features ref={featureRef} /> */}
         <Switch>
           <Route path="/home" component={Home} />
           <Route exact path="/" component={BillForm} />

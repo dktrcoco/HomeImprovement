@@ -15,8 +15,6 @@ const Nav = (props) => {
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
   const handleClick = (e) => {
-    console.log(e.target.id);
-    console.log("fired");
     props.setCurrentPage(e.target.id);
   };
 

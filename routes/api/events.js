@@ -8,13 +8,12 @@ var db = require("../../models");
 router
   .route("/")
   .get(function (req, res) {
-      var currentUserGoogleId = getGoogleId(req, res);
+    var currentUserGoogleId = getGoogleId(req, res);
     db.Event.find({ googleId: currentUserGoogleId }).then(function (dbEvent) {
       res.json(dbEvent);
     });
   })
   .post(function (req, res) {
-    console.log(req.body);
     var eventData = req.body;
     eventData.googleId = getGoogleId(req, res);
     db.Event.create(req.body).then(function (dbEvent) {
@@ -45,7 +44,6 @@ router
 
 function getGoogleId(req, res) {
   var currentUserGoogleId = req.cookies.googleId;
-  console.log(currentUserGoogleId);
   if (typeof currentUserGoogleId === "undefined") {
     res.status(500).json("User not logged in");
   }
