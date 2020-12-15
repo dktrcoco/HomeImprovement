@@ -11,7 +11,7 @@ h2 {
 	padding: 10px;
 	margin: auto;
 	/* background-color: rgba(165, 100, 53, 0.75); */
-	background-color:  rgba(255, 255, 255, 0.466);
+	background-color:  rgba(255, 255, 255, 0.75);
 }
 
 #listBox {
@@ -19,7 +19,7 @@ h2 {
 	border-radius: 25px;
 	padding: 10px;
 	margin: auto;
-	background-color:  rgba(255, 255, 255, 0.466);
+	background-color:  rgba(255, 255, 255, 0.75);
 	/* background-color:  rgba(165, 100, 53, 0.75); */
 	/* background-color: #855E42; */
 }

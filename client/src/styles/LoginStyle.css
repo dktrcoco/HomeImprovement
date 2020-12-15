@@ -5,6 +5,12 @@
 $google-blue: #4285f4;
 $button-active-blue: #1669F2; */
 
+.pic {
+  float: left;
+  margin-right: 9px;
+  height: 50px;
+}
+
 .loginButton {
   width: 184px;
   height: 42px;

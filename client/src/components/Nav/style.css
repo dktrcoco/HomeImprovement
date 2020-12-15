@@ -3,10 +3,11 @@
   text-align: justify;
   max-width: 500px;
   padding: 10px;
+  /* height: 10px; */
 }
 
 /* #userPicContainer {
-  height: 1px;
+  height: 100px;
 } */
 
 .title {
