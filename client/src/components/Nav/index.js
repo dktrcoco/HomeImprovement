@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-// import Navbar from "react-bootstrap/Navbar";
 import Logout from "../Logout";
 import Login from "../Login";
 import { Row, Col, Container } from "react-bootstrap";
@@ -30,31 +29,9 @@ const Nav = (props) => {
               <span className="title">Abode</span>
             </a>
           </Col>
-          <Col>
+          {/* <Col>
             <div className="test" id="userPicContainer"></div>
-          </Col>
-
-          {/* <Row className="rowHouse"> */}
-          {/* <MyIcon
-          className="house"
-          alt="Image of a simple house."
-          src="./assets/img/house1.png"
-        />
-        <MyIcon
-          className="house"
-          alt="Image of a beach house."
-          src="./assets/img/house2.png"
-        />
-        <MyIcon
-          className="house"
-          alt="Image of an animated house."
-          src="./assets/img/house3.png"
-        />
-        <MyIcon
-          className="house"
-          alt="Image of a mansion."
-          src="./assets/img/house4.jpg"
-        /> */}
+          </Col> */}
         </Row>
         <div className="toggler">
           <button
@@ -76,15 +53,21 @@ const Nav = (props) => {
             <Logout />
           </Col>
         </Row>
-        {/* <Col className="navButton"></Col> */}
         <Row>
           <Col>
-            <div className={`${isNavCollapsed ? "collapse" : ""} navbar-collapse`} id="navbarsExample09">
+            <div
+              className={`${isNavCollapsed ? "collapse" : ""} navbar-collapse`}
+              id="navbarsExample09"
+            >
               <div className="description">
+                <div id="userPicContainer"></div>
+
                 <p>
-                  Abode simiplifies your life by providing a single location to keep track of all of the important things in your life.
-                  Track your bills, important events, chores and tasks to be done, and even a list of groceries you need to buy!
-                  Abode instills order to a disordered world.
+                  Abode simiplifies your life by providing a single location to
+                  keep track of all of the important things in your life. Track
+                  your bills, important events, chores and tasks to be done, and
+                  even a list of groceries you need to buy! Abode instills order
+                  to a disordered world.
                 </p>
               </div>
             </div>

@@ -110,7 +110,7 @@ function BillForm() {
       <Features />
       <Row>
         <Col id="infoBox">
-          <form action="/api/bills" method="post">
+          <form className="enter" action="/api/bills" method="post">
             <h2>Enter a Bill</h2>
             <input
               onChange={handleInputChange}

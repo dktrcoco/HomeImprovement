@@ -18,7 +18,13 @@
 	border-radius: 25px;
 	padding: 10px;
 	margin: auto;
+	background-color: rgba(133, 94, 66, 0.75);
+	/* background-color: #855E42; */
 }
+
+/* .enter {
+	background-color: rgba(133, 94, 66, 0.75);
+} */
 
 #carousel {
 	border: 2px solid #3174ad;
