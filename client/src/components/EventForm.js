@@ -67,7 +67,7 @@ function EventForm() {
   // Then reloads events from the database
   function handleFormSubmit(event) {
     event.preventDefault();
-    console.log(formObject);
+
     if (formObject.event && formObject.start && formObject.end) {
       EventAPI.saveEvent({
         title: formObject.event,
@@ -90,18 +90,18 @@ function EventForm() {
         <Col>
           <Carousel id="carousel" interval={20000}>
             <Carousel.Item>
-              <video className='d-block w-auto' autoPlay loop muted>
-                <source src={SnowfallVid1} type='video/mp4' />
+              <video className="d-block w-auto" autoPlay loop muted>
+                <source src={SnowfallVid1} type="video/mp4" />
               </video>
             </Carousel.Item>
             <Carousel.Item>
-              <video className='d-block w-auto' autoPlay loop muted>
-                <source src={SnowfallVid2} type='video/mp4' />
+              <video className="d-block w-auto" autoPlay loop muted>
+                <source src={SnowfallVid2} type="video/mp4" />
               </video>
             </Carousel.Item>
             <Carousel.Item>
-              <video className='d-block w-auto' autoPlay loop muted>
-                <source src={SnowfallVid3} type='video/mp4' />
+              <video className="d-block w-auto" autoPlay loop muted>
+                <source src={SnowfallVid3} type="video/mp4" />
               </video>
             </Carousel.Item>
           </Carousel>
@@ -159,8 +159,8 @@ function EventForm() {
               ))}
             </ul>
           ) : (
-              <h3>No Results to Display</h3>
-            )}
+            <h3>No Results to Display</h3>
+          )}
         </Col>
       </Row>
     </Container>

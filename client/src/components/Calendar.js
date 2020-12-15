@@ -73,24 +73,20 @@ class MyCalendar extends Component {
 	componentDidMount() {
 		eventApi.getEvents().then((res) => {
 			const events = res.data;
-			console.log(events);
 			this.setState({ events }, () => console.log(this.state));
 		});
 		choreApi.getChores().then((res) => {
 			const chores = res.data;
-			console.log(chores);
 			this.setState({ chores }, () => console.log(this.state));
 		});
 
 		choreApi.getChores().then((res) => {
 			const chores = res.data;
-			console.log(chores);
 			this.setState({ chores }, () => console.log(this.state));
 		});
 
 		billApi.getBills().then((res) => {
 			const bills = res.data;
-			console.log(bills);
 			this.setState({ bills }, () => console.log(this.state));
 		});
 	}
@@ -102,7 +98,6 @@ class MyCalendar extends Component {
 
 	// trying to set up different colors for different categories
 	eventStyleGetter = function (event, start, end, isSelected) {
-		console.log(event);
 		var backgroundColor = "#" + event.backgroundColor;
 		var style = {
 			backgroundColor: backgroundColor,
@@ -118,7 +113,6 @@ class MyCalendar extends Component {
 	};
 
 	render() {
-		console.log(this.state.type);
 		return (
 			<div>
 				<NewCalendar

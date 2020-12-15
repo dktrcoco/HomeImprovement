@@ -9,8 +9,7 @@ var db = require("../../models");
 router
   .route("/")
   .get(function (req, res) {
-    // var currentUserGoogleId = req.cookies.googleId;
-    // console.log("currentUserGoogleId: " + currentUserGoogleId);
+
     var currentUserGoogleId = getGoogleId(req, res);
     db.Bill.find({ googleId: currentUserGoogleId })
       .then(function (dbBill) {
@@ -52,7 +51,6 @@ router
 
 function getGoogleId(req, res) {
   var currentUserGoogleId = req.cookies.googleId;
-  console.log(currentUserGoogleId);
   if (typeof currentUserGoogleId === "undefined") {
     res.status(500).json("User not logged in");
   }
