@@ -132,7 +132,7 @@ function ChoreForm() {
             />
             <button
               onClick={handleFormSubmit}
-              className="btn btn-lg btn-primary btn-block submitbtn"
+              className="btn btn-lg btn-outline-dark btn-block submitbtn"
               id="submit"
               type="submit"
             >
@@ -144,7 +144,7 @@ function ChoreForm() {
       <br></br>
       <Row>
         <Col id="listBox">
-          <h1>Chores On My List</h1>
+          <h2>Chores On My List</h2>
           {chores.length ? (
             <ul>
               {chores.map((chore) => (

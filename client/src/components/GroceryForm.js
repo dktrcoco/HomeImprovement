@@ -125,7 +125,7 @@ function GroceryForm() {
             />
             <button
               onClick={handleFormSubmit}
-              className="btn btn-lg btn-primary btn-block submitbtn"
+              className="btn btn-lg btn-outline-dark btn-block submitbtn"
               id="submit"
               type="submit"
             >
@@ -137,7 +137,7 @@ function GroceryForm() {
       <br></br>
       <Row>
         <Col id="listBox">
-          <h1>Groceries On My List</h1>
+          <h2>Groceries On My List</h2>
           {groceries.length ? (
             <ul>
               {groceries.map((grocery) => (

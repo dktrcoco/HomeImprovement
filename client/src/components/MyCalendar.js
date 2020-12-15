@@ -71,21 +71,29 @@ function MyCalendar({ type, events, bills, chores, getEvents }) {
 				endAccessor="end"
 				style={{ height: 500 }}
 			/>
-			<Row className="features" style={{ display: "flex" }}>
+			<Row className="features" style={{ display: "flex", justifyContent: "center", alignItems: "center"}}>
 				<Col>
-					<MyIcon src="./assets/img/events.png" link="events" />
+					<div className="imageColor1">
+						<MyIcon src="./assets/img/events.png" link="events" />
+					</div>
 				</Col>
 
 				<Col>
-					<MyIcon src="./assets/img/bills.png" link="bills" />
+					<div className="imageColor2">
+						<MyIcon src="./assets/img/bills.png" link="bills" />
+					</div>
 				</Col>
 
 				<Col>
-					<MyIcon src="./assets/img/chores.png" link="chores" />
+					<div className="imageColor3">
+						<MyIcon src="./assets/img/chores.png" link="chores" />
+					</div>
 				</Col>
 
 				<Col>
-					<MyIcon src="./assets/img/groceries.png" link="groceries" />
+					<div className="imageColor4">
+						<MyIcon src="./assets/img/groceries.png" link="groceries" />
+					</div>
 				</Col>
 			</Row>
 			{type === "chores" && (
