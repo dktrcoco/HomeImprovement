@@ -1,11 +1,7 @@
 const router = require("express").Router();
 
-// const { buildNavLinkData } = require("@fullcalendar/react");
 var db = require("../../models");
 
-// GET route for getting all chores
-// not sure how to differentiate chores from other data
-// don't needs controller if have access to db directly here
 router
   .route("/")
   .get(function (req, res) {

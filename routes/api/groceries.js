@@ -2,8 +2,6 @@ const router = require("express").Router();
 
 var db = require("../../models");
 
-// GET route for getting all chores
-// don't needs controller if have access to db directly here
 router
   .route("/")
   .get(function (req, res) {

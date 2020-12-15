@@ -2,9 +2,6 @@ const router = require("express").Router();
 
 var db = require("../../models");
 
-// GET route for getting all Events
-// not sure how to differentiate Events from other data
-// don't needs controller if have access to db directly here
 router
   .route("/")
   .get(function (req, res) {

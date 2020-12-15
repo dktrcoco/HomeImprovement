@@ -1,5 +1,4 @@
 import React from "react";
-import axios from "axios";
 
 function Signup() {
   return (
@@ -21,8 +20,6 @@ function Signup() {
         <input
           type="text"
           className="form-control"
-          // value={this.state.username}
-          // onChange={this.handleChange}
           placeholder="Enter Username"
         />
       </div>

@@ -1,143 +1,40 @@
-/* We need to make this button look like a normal Google Logout button */
-
-
-/* We need to make this button look like a normal Google Login button */
-/* @import url(https://fonts.googleapis.com/css?family=Roboto:500); */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-/* $white: #fff;
-$google-blue: #4285f4;
-$button-active-blue: #1669F2; */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
 .logoutButton {
   width: 120px;
   height: 42px;
   background-color: #4285f4;
   border-radius: 2px;
-  box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
 }
 .logoutButton:hover {
-    box-shadow: 0 0 6px #4285f4;
+  box-shadow: 0 0 6px #4285f4;
 }
 .logoutButton:active {
-    background: #4285f4;
-}
-  .google-icon-wrapper {
-    position: absolute;
-    margin-top: -10px;
-    margin-left: -7px;
-    width: 40px;
-    height: 40px;
-    border-radius: 2px;
-    background-color: #fff;
-  }
-  .google-icon {
-    position: absolute;
-    margin-top: 11px;
-    margin-left: -10px;
-    width: 18px;
-    height: 18px;
-  }
-  .btn-text {
-    /* font-family:  */
-    float: right;
-    margin-top: -10px;
-    margin: 0px 11px 0 0;
-    color: #fff;
-    font-size: 14px;
-    letter-spacing: 0.2px;
-    font-family: "Roboto", sans-serif;
-  }
-/*   
-  &:hover {
-    box-shadow: 0 0 6px #4285f4;
-  }
-  &:active {
-    background: #1669f2;
-  }
-} */
-
-
-
-
-
-
-
-
-
-/* .buttonText {
-    float: right;
-    margin: 11px 11px 0 0;
-    color: #fff;
-    fon-size: 14px;
-    letter-spacing: 0.2px;
-    font-family: "Roboto";
-}
-
-.loginButton {
-  float: right;
-}
-
-.googleBtn {
-  width: 184px;
-  height: 42px;
-  background-color: #4285f4;
-  border-radius: 2px;
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+  background: #4285f4;
 }
 .google-icon-wrapper {
   position: absolute;
-  margin-top: 1px;
-  margin-left: 1px;
+  margin-top: -10px;
+  margin-left: -7px;
   width: 40px;
   height: 40px;
   border-radius: 2px;
   background-color: #fff;
 }
 .google-icon {
-    position: absolute;
-    margin-top: 11px;
-    margin-left: 11px;
-    width: 18px;
-    height: 18px;
+  position: absolute;
+  margin-top: 11px;
+  margin-left: -10px;
+  width: 18px;
+  height: 18px;
 }
-
-&:hover {
-    box-shadow: 0 0 6px #4285f4;
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .button { */
-   /* display: inline-block;
-   text-decoration: none;
-   color: rgba(3, 169, 244, 0.54);
-   width: 100px;
-   height: 100px;
-   border-radius: 50%;
-   border: double 4px #668ad8;
-   text-align: center;
-   vertical-align: middle;
-   overflow: hidden;
-   transition: .6s;
-} */
-
-/* .button:hover {
-    -webkit-transform: rotateY(360deg);
-    -ms-transform: rotateY(360deg);
-    transform: rotateY(360deg);
-} */
+.btn-text {
+  float: right;
+  margin-top: -10px;
+  margin: 0px 11px 0 0;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  font-family: "Roboto", sans-serif;
+}
