@@ -114,7 +114,7 @@ You can also reach us through GitHub directly via our accounts (listed above).
 -Include api calls for weather to influence recommendations for outdoor chores
 -Add multiple log-ins
 -Add multiple authentication level types
--SMS messages
+-SMS messages between users
 -Allow for integration of existing Google Calendars
 -Implement various carousel videos that change based on the season or other variable (like weather)
 -When a user clicks on an item in their grocery list, several recipes incorporating that item are displayed
