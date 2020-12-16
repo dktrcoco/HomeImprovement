@@ -114,7 +114,7 @@ You can also reach us through GitHub directly via our accounts (listed above).
 -Include api calls for weather to influence recommendations for outdoor chores
 -Add multiple log-ins
 -Add multiple authentication level types
--SMS messages
+-SMS messages between users
 -Allow for integration of existing Google Calendars
 -Implement various carousel videos that change based on the season or other variable (like weather)
 -When a user clicks on an item in their grocery list, several recipes incorporating that item are displayed
@@ -125,7 +125,9 @@ You can also reach us through GitHub directly via our accounts (listed above).
 
 -Shonta: 
 
--Chris:
+-Chris: This project was a lot of work but I am significantly more confident in my abilities regarding MERN stack development. Additionally, I feel confident finding an npm package for something I need (cookie parser and react-rounded-image for a couple examples I found and utilized for this project). I definitely need to practice some of the more complicated (to me) concepts but I feel I am now a capable full-stack developer with high potential for growth.
+
+I've worked with each of the other teammates in previous projects so we already had a rapport together. This proved very helpful during the development process. I've enjoyed my time working with everyone on this project and I wish everyone success and good fortune!
 
 -Matt:
 
